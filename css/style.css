@@ -1,0 +1,31 @@
+body {
+		font-size: 16px;
+    line-height: 22px;
+    color: rgb (50, 50, 50);
+    font-weight:  normal;
+    font-family: "roboto regular" ;
+		}
+
+h1  {
+		font-size: 60px;
+    line-height: 60,35px;
+    color: rgb (255, 255, 255);
+    font-weight: bold;
+    font-family: "roboto regular" ;
+		}
+
+h2  {
+		font-size: 35px;
+		line-height: 41px;
+		color: rgb (255, 255, 255);
+		font-weight: bold;
+		font-family: "roboto regular" ;
+		}
+
+h3  {
+		font-size: 24px;
+		line-height: 30px;
+		color: rgb (50, 50, 50);
+		font-weight: medium;
+		font-family: "roboto regular" ;
+		}
