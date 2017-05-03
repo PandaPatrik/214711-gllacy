@@ -3,212 +3,235 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-    <body>
+  <body>
 
-      <!--Шапка сайта-->
-      <div class="wrapper">
-
+    <!--Шапка сайта-->
+    <div class="wrapper">
       <div class="header-page">
+        <div class="container" style="background-color:#6A5ACD">
+          <div class="header-page-inner">
 
-        <div class="container">
-
-          <div class="header-logo">
-            <a href="#">Логотип</a>
-          </div>
-
-          <!--Навигация-->
-          <ul class="header-nav">
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">О компании</a></li>
-          </ul>
-
-          <!--Кнопки-->
-          <div class="header-actions">
-            <ul class="header-actions-list">
-              <li class="header-actions-item">
-                <span class="header-actions-icon"></span> <!-- Иконка -->
-                <form action="#" method="post">
-                  <label for="serching">
-                  <input type="text" name="serching" id="serching">
-                </form>
-              </li>
-              <li class="header-actions-item">
-                <span class="header-actions-icon"></span> <!-- Иконка -->
-                <a href="#" class="header-actions-link">Вход</a>
-                <!--скрытый блок-->
-              </li>
-              <li class="header-actions-item">
-                <span class="header-actions-icon"></span> <!-- Иконка -->
-                <a href="#" class="header-actions-link">2 товара</a>
-                <!--скрытый блок-->
-              </li>
-            </ul>
-
-            <div class="header-contacts">
-              <span>С 10 до 20, ежедневно</span>
-              <a href="#">8 812 450-25-25</a>
+            <div class="header-logo" style="background-color:#FF0000">
+              <a href="#"><img src="img/logo.png" widgh="154" height="64" alt="Глэйси"></a>
             </div>
-          </div>
-
-          <!-->Хлебные крошки<-->
-          <div class="main-nav">
-            <ul class="breadcrumbs">
-              <li><a href="#">Главная</a></li>
+            <!--Навигация-->
+            <ul class="header-nav" style="color:#">
               <li><a href="#">Каталог</a></li>
-              <li><a href="#">Сливочное</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">О компании</a></li>
             </ul>
-            <h1>Сливочное мороженое</h1>
+            <!--Кнопки-->
+            <div class="header-actions" style="background-color:#CD5C5C">
+              <ul class="header-actions-list">
+                <li class="header-actions-item">
+                  <span class="header-actions-icon"></span> <!-- Иконка -->
+                  <form action="#" method="post">
+                    <label for="serching">
+                    <input type="text" name="serching" id="serching">
+                  </form>
+                </li>
+                <li class="header-actions-item">
+                  <span class="header-actions-icon"></span> <!-- Иконка -->
+                  <a href="#" class="header-actions-link">Вход</a>
+                  <!--скрытый блок-->
+                </li>
+                <li class="header-actions-item">
+                  <span class="header-actions-icon"></span> <!-- Иконка -->
+                  <a href="#" class="header-actions-link">2 товара</a>
+                  <!--скрытый блок-->
+                </li>
+              </ul>
+
+              <div class="header-contacts" style="background-color:#E9967A">
+                <span>С 10 до 20, ежедневно</span>
+                <a href="#">8 812 450-25-25</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
       <!--Тело страницы-->
       <main class="page-content">
 
         <div class="container">
-          <!--Фильтры-->
-          <div class="filters">
-            <form action="#" method="post">
 
+          <!--Хлебные крошки-->
+          <ul class="breadcrumbs" style="background-color:#FF1493">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Сливочное</a></li>
+          </ul>
+          <h1>Сливочное мороженое</h1>
+
+
+
+            <!--Фильтры-->
+          <div class="filters" style="background-color:#006400">
+            <form class="filters-list" action="#" method="post">
               <!--Сортировка-->
-              <div class="filters-sort">
-                <p class="">Сортировка</p>
-                <select name="sort">
+              <div class="filters-sort" style="background-color:#20B2AA">
+                <!-- <p class="sort-field">Сортировка</p> -->
+                <label for="sort-field" class="sort-field">Сортировка:</label>
+                <select class="sort-window" name="sort" id="sort-field">
                   <option value="popular">по популярности</value>
                 </select>
               </div>
 
               <!--Цена-->
-              <div class="filters-cost">
-                <label for="cost-field">Цена: 100 руб. - 500 руб.</label>
+              <div class="filters-cost" style="background-color:#FFA500">
+                <label for="cost-field" class="cost-field">Цена: 100 руб. - 500 руб.</label>
                 <input type="???" name="cost" id="cost-field">
               </div>
 
               <!--Жирность-->
-              <div class="filters-fat">
-                <p>Жирность</p>
-                <input type="checkbox" name="rate" id="0-rate">
-                <label for="0-rate">0%</label>
-                <input type="checkbox" name="rate" id="10-rate">
-                <label for="0-rate">10%</label>
-                <input type="checkbox" name="rate" id="30-rate">
-                <label for="0-rate">до 30%</label>
-                <input type="checkbox" name="rate" id="more-rate">
-                <label for="0-rate">выше 30%</label>
+              <div class="filters-fat" style="background-color:#7FFFD4">
+                <p class="filters-fat-name">Жирность</p>
+                <div class="group-filters">
+                  <input type="checkbox" name="rate" id="0-rate">
+                  <label for="0-rate">0%</label>
+                </div>
+                <div class="group-filters">
+                  <input type="checkbox" name="rate" id="10-rate">
+                  <label for="0-rate">10%</label>
+                </div>
+                <div class="group-filters">
+                  <input type="checkbox" name="rate" id="30-rate">
+                  <label for="0-rate">до 30%</label>
+                </div>
+                <div class="group-filters">
+                  <input type="checkbox" name="rate" id="more-rate">
+                  <label for="0-rate">выше 30%</label>
+                </div>
               </div>
 
               <!--Наполнители-->
-              <div class="filters-filler">
-                <p class="">Наполнители</p>
-                <label for="filler-chocko">шоколадные</label>
-                <input type="checkbox" name="chocko" id="filler-chocko">
-                <label for="filler-shugar">сахарные присыпки</label>
-                <input type="checkbox" name="shugar" id="filler-shugar">
-                <label for="filler-fruits">фрукты</label>
-                <input type="checkbox" name="fruits" id="filler-fruits">
-                <label for="filler-sirup">сиропы</label>
-                <input type="checkbox" name="sirup" id="filler-sirup">
-                <label for="filler-jam">джемы</label>
-                <input type="checkbox" name="jam" id="filler-jam">
+              <div class="filters-filler" style="background-color:#FFFF00">
+                <p class="filters-filler-name">Наполнители</p>
+                <div class="group-filters">
+                  <input type="checkbox" name="chocko" id="filler-chocko">
+                  <label for="filler-chocko">шоколадные</label>
+                </div>
+                <div class="group-filters">
+                  <input type="checkbox" name="shugar" id="filler-shugar">
+                  <label for="filler-shugar">сахарные присыпки</label>
+                </div>
+                <div class="group-filters">
+                  <input type="checkbox" name="fruits" id="filler-fruits">
+                  <label for="filler-fruits">фрукты</label>
+                </div>
+                <div class="group-filters">
+                  <input type="checkbox" name="sirup" id="filler-sirup">
+                  <label for="filler-sirup">сиропы</label>
+                </div>
+                <div class="group-filters">
+                  <input type="checkbox" name="jam" id="filler-jam">
+                  <label for="filler-jam">джемы</label>
+                </div>
               </div>
-
               <!--кнопка отправки формы-->
-              <input type="submit" name="send" value="Применить">
+              <input type="submit" name="send" value="Применить" class="filters-btn">
             </form>
           </div>
 
           <!--12 больших карточек-->
-          <section class="goods">
-            <div class="container">
+          <section class="goods" style="background-color:grey">
+            <div class="goods-container">
               <div class="goods-list">
-                <article class="goods-item">
-                  <div class="googs-image">
-                    <img src="#" width=" " height=" " alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                    <div class="goods-price">
-                      <div class="goods-pay">310</div>
-                      <div class="goods-weight">
-                          <span>Р</span>
-                          <span>/кг</span>
-                      </div>
+                <article class="goods-item" style="background-color:#0000FF">
+                  <div class="googs-image" style="background-color:#FFFF00">
+                    <img src="img/ice-orange.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                  </div>
+                  <div class="goods-price" style="background-color:#FF4500">
+                    <div class="goods-pay">310</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
                     </div>
                   </div>
-                  <a class="goods-item-link" href="#">
-                    <h3 class="goods-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
+                  <div class="signature">
+                    <a class="goods-item-link" href="#" style="background-color:#006400">
+                      <h3 class="goods-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+                    </a>
+                  </div>
                 </article>
 
                 <article class="goods-item">
                   <div class="googs-image">
-                    <img src="#" width=" " height=" " alt="Сливочно-кофейное с кусочками шоколада">
-                    <div class="goods-price">
-                      <div class="goods-pay">310</div>
-                      <div class="goods-weight">
-                        <span>Р</span>
-                        <span>/кг</span>
-                      </div>
+                    <img src="img/ice-coffee.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+                  </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">310</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
                     </div>
                   </div>
-                   <a class="goods-item-link" href="#">
-                     <h3 class="goods-item-name">Сливочно-кофейное с кусочками шоколада</h3>
-                   </a>
+                  <a class="goods-item-link" href="#">
+                   <h3 class="goods-item-name">Сливочно-кофейное с кусочками шоколада</h3>
+                  </a>
                    <!-- <a class="goods-item-btn" href="#">Быстрый просмотр<a>-->
-                 </article>
-
-                <article class="goods-item">
-                    <div class="googs-image">
-                      <img src="#" width=" " height=" " alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                      <div class="goods-price">
-                        <div class="goods-pay">310</div>
-                        <div class="goods-weight">
-                            <span>Р</span>
-                            <span>/кг</span>
-                        </div>
-                      </div>
-                  </div>
-                    <a class="goods-item-link" href="#">
-                      <h3 class="goods-item-name">Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
-                  </article>
-
-                <article class="goods-item">
-                      <div class="googs-image">
-                       <img src="#" width=" " height=" " alt="Сливочное крем-брюле с карамельной подливкой">
-                        <div class="goods-price">
-                         <div class="goods-pay">310</div>
-                          <div class="goods-weight">
-                             <span>Р</span>
-                             <span>/кг</span>
-                          </div>
-                        </div>
-                      </div>
-                     <a class="goods-item-link" href="#">
-                       <h3 class="goods-item-name">Сливочное крем-брюле с карамельной подливкой</h3></a>
                 </article>
 
                 <article class="goods-item">
                   <div class="googs-image">
-                    <img src="#" width=" " height=" " alt="Сливочное с брусничным джемом">
-                      <div class="goods-price">
-                        <div class="goods-pay">325</div>
-                        <div class="goods-weight">
-                            <span>Р</span>
-                            <span>/кг</span>
-                        </div>
-                      </div>
+                    <img src="img/ice-strawberry.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                  </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">310</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
+                    </div>
                   </div>
                   <a class="goods-item-link" href="#">
-                    <h3 class="goods-item-name">Сливочное с брусничным джемом</h3></a>
+                    <h3 class="goods-item-name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+                  </a>
                 </article>
 
                 <article class="goods-item">
                   <div class="googs-image">
-                    <img src="#" width=" " height=" " alt="Сливочно-черничное с цельными ягодами">
-                    <div class="goods-price">
-                      <div class="goods-pay">410</div>
-                      <div class="goods-weight">
-                        <span>Р</span>
-                        <span>/кг</span>
-                      </div>
+                   <img src="img/ice-caramel.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+                  </div>
+                  <div class="goods-price">
+                   <div class="goods-pay">310</div>
+                    <div class="goods-weight">
+                       <span>Р</span>
+                       <span>/кг</span>
+                    </div>
+                  </div>
+                  <a class="goods-item-link" href="#">
+                    <h3 class="goods-item-name">Сливочное крем-брюле с карамельной подливкой</h3>
+                  </a>
+                </article>
+
+                <article class="goods-item">
+                  <div class="googs-image">
+                    <img src="img/ice-cowberry.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
+                  </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">325</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
+                    </div>
+                  </div>
+                  <a class="goods-item-link" href="#">
+                    <h3 class="goods-item-name">Сливочное с брусничным джемом</h3>
+                  </a>
+                </article>
+
+                <article class="goods-item">
+                  <div class="googs-image">
+                    <img src="img/ice-blueberry.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами">
+                  </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">410</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
                     </div>
                   </div>
                   <a class="goods-item-link" href="#">
@@ -218,58 +241,61 @@
 
                 <article class="goods-item">
                   <div class="googs-image">
-                    <img src="#" width=" " height=" " alt="Сливочно-лимонное с карамельной присыпкой">
-                    <div class="goods-price">
-                      <div class="goods-pay">375</div>
-                      <div class="goods-weight">
-                        <span>Р</span>
-                        <span>/кг</span>
-                      </div>
-                    </div>
+                    <img src="img/ice-lemon.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
                   </div>
-                    <a class="goods-item-link" href="#">
-                      <h3 class="goods-item-name">Сливочно-лимонное с карамельной присыпкой</h3></a>
-                </article>
-
-                <article class="goods-item">
-                  <div class="googs-image">
-                    <img src="#" width=" " height=" " alt="Сливочное с шокрладной стружкой">
-                    <div class="goods-price">
-                      <div class="goods-pay">320</div>
-                      <div class="goods-weight">
-                        <span>Р</span>
-                        <span>/кг</span>
-                      </div>
-                    </div>
-                  </div>
-                    <a class="goods-item-link" href="#">
-                      <h3 class="goods-item-name">Сливочное с шокрладной стружкой</h3></a>
-                </article>
-
-                <article class="goods-item">
-                  <div class="googs-image">
-                    <img src="#" width=" " height=" " alt="Сливочно-ванильное с кусочками шоколада">
-                    <div class="goods-price">
-                      <div class="goods-pay">440</div>
-                      <div class="goods-weight">
-                        <span>Р</span>
-                        <span>/кг</span>
-                      </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">375</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
                     </div>
                   </div>
                   <a class="goods-item-link" href="#">
-                    <h3 class="goods-item-name">Сливочно-ванильное с кусочками шоколада</h3></a>
+                    <h3 class="goods-item-name">Сливочно-лимонное с карамельной присыпкой</h3>
+                  </a>
                 </article>
 
                 <article class="goods-item">
                   <div class="googs-image">
-                    <img src="#" width=" " height=" " alt="Сливочное с ментоловым сиропом">
-                    <div class="goods-price">
-                      <div class="goods-pay">435</div>
-                      <div class="goods-weight">
-                        <span>Р</span>
-                        <span>/кг</span>
-                      </div>
+                    <img src="img/ice-chocolate.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
+                  </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">320</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
+                    </div>
+                  </div>
+                  <a class="goods-item-link" href="#">
+                    <h3 class="goods-item-name">Сливочное с шоколадной стружкой</h3>
+                  </a>
+                </article>
+
+                <article class="goods-item">
+                  <div class="googs-image">
+                    <img src="img/ice-vanilla.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
+                  </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">440</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
+                    </div>
+                  </div>
+                  <a class="goods-item-link" href="#">
+                    <h3 class="goods-item-name">Сливочно-ванильное с кусочками шоколада</h3>
+                  </a>
+                </article>
+
+                <article class="goods-item">
+                  <div class="googs-image">
+                    <img src="img/ice-menthol.jpg" width="267" height="267" alt="Сливочное с ментоловым сиропом">
+                  </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">435</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
                     </div>
                   </div>
                    <a class="goods-item-link" href="#">
@@ -278,76 +304,78 @@
                 </article>
 
                 <article class="goods-item">
-                    <div class="googs-image">
-                      <img src="#" width=" " height=" " alt="Сливочное с кусочками черного шоколада">
-                      <div class="goods-price">
-                        <div class="goods-pay">355</div>
-                        <div class="goods-weight">
-                            <span>Р</span>
-                            <span>/кг</span>
-                        </div>
-                      </div>
+                  <div class="googs-image">
+                    <img src="img/ice-black.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
+                  </div>
+                  <div class="goods-price">
+                    <div class="goods-pay">355</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
                     </div>
-                    <a class="goods-item-link" href="#">
-                      <h3 class="goods-item-name">Сливочное с кусочками черного шоколада</h3></a>
-                  </article>
+                  </div>
+                  <a class="goods-item-link" href="#">
+                    <h3 class="goods-item-name">Сливочное с кусочками черного шоколада</h3>
+                  </a>
+                </article>
 
                 <article class="goods-item">
-                      <div class="googs-image">
-                        <img src="#" width=" " height=" " alt="Сливочное с мятным сиропом">
-                        <div class="goods-price">
-                          <div class="goods-pay">420</div>
-                          <div class="goods-weight">
-                            <span>Р</span>
-                            <span>/кг</span>
-                          </div>
-                        </div>
-                      </div>
-                     <a class="goods-item-link" href="#">
-                       <h3 class="goods-item-name">Сливочное с мятным сиропом</h3></a>
-                   </article>
-
+                  <div class="googs-image">
+                    <img src="img/ice-mint.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
+                  </div><!--применить ко всем-->
+                  <div class="goods-price">
+                    <div class="goods-pay">420</div>
+                    <div class="goods-weight">
+                      <span>Р</span>
+                      <span>/кг</span>
+                    </div>
+                  </div>
+                  <a class="goods-item-link" href="#">
+                    <h3 class="goods-item-name">Сливочное с мятным сиропом</h3>
+                  </a>
+                </article>
               </div>
             </div>
           </section>
 
           <!--Страницы-->
-          <ul class="page-list">
+          <ul class="pagination" style="background-color:#00FFFF">
             <!--как сделать стрелки?-->
-            <li class="page-list-item">1</li>
-            <li class="page-list-item">2</li>
-            <li class="page-list-item">3</li>
-            <li class="page-list-item">4</li>
-            <li class="page-list-item">5</li>
-            <!--как сделать стрелки?-->
+            <li class="pagination-item"><a class="pagination-link">1</a></li>
+            <li class="pagination-item"><a class="pagination-link">2</a></li>
+            <li class="pagination-item"><a class="pagination-link">3</a></li>
+            <li class="pagination-item"><a class="pagination-link">4</a></li>
+            <li class="pagination-item"><a class="pagination-link">5</a></li>
+            <!--как сделать стрелки? Псевдоэлементы before after-->
           </ul>
         </div>
       </main>
 
-    <!-->Подвал<-->
+        <!--Подвал-->
+      <footer class="footer-page">
+        <div class="container" style="background-color:#DAA520">
+          <div class="footer-page-inner">
+            <ul class="footer-social" style="background-color:#FF0000">
+              <li><a class="social-btn" href="https://twitter.com/">Твиттер</a></li>
+              <li><a class="social-btn" href="https://vk.com">Вконтакте</a></li>
+              <li><a class="social-btn" href="https://facebook.com">Фейсбук</a></li>
+              <li><a class="social-btn" href="https://instagram.com">Инстаграм</a></li>
+            </ul>
 
-    <footer>
-      <div class="container">
+            <ul class="footer-links" style="background-color:#FFFF00">
+              <li><a href="#">Для поставщиков</a></li>
+              <li><a href="#">О производстве</a></li>
+              <li><a href="#">Наши документы</a></li>
+              <li><a href="#">Экологические стандарты</a></li>
+            </ul>
 
-        <ul class="footer-social">
-          <li><a class="social-btn" href="https://twitter.com/">Твиттер</a></li>
-          <li><a class="social-btn" href="https://vk.com">Вконтакте</a></li>
-          <li><a class="social-btn" href="https://facebook.com">Фейсбук</a></li>
-          <li><a class="social-btn" href="https://instagram.com">Инстаграм</a></li>
-        </ul>
-
-        <ul class="links">
-          <li><a href="#">Для поставщиков</a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
-        </ul>
-
-        <div class="footer-copyright">
-          <a href="https://htmlacademy.ru/"><img src="#" alt="htmlacademy" width="#" height="#"></a>
-          <div>Сделано в<a href="https://htmlacademy.ru/">HTML Academy</a>2016</div>
+            <div class="footer-copyright" style="background-color:#008000">
+              <a href="https://htmlacademy.ru/"><img src="img/icon-html.png" alt="htmlacademy" width="#" height="#"></a>
+              <div>Сделано в<a href="https://htmlacademy.ru/">HTML Academy</a>2016</div>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

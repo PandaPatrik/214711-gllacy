@@ -1,31 +1,208 @@
 body {
 		font-size: 16px;
     line-height: 22px;
-    color: rgb (50, 50, 50);
-    font-weight:  normal;
+    font-weight: normal;
     font-family: "roboto regular" ;
 		}
+.wrapper {}
 
-h1  {
-		font-size: 60px;
-    line-height: 60,35px;
-    color: rgb (255, 255, 255);
-    font-weight: bold;
-    font-family: "roboto regular" ;
-		}
+.container {
+	max-width: 1200px;
+	padding-left: 27px;
+	padding-right: 27px;
+	margin: 0 auto;
+	}
 
-h2  {
-		font-size: 35px;
-		line-height: 41px;
-		color: rgb (255, 255, 255);
-		font-weight: bold;
-		font-family: "roboto regular" ;
-		}
+/*флексы*/
+.header-page {
 
-h3  {
-		font-size: 24px;
-		line-height: 30px;
-		color: rgb (50, 50, 50);
-		font-weight: medium;
-		font-family: "roboto regular" ;
-		}
+}
+
+.header-page-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+
+.header-logo {
+	width: 154px;
+	height: 64px;
+	margin-right: 10px;
+	}
+.header-actions {
+	width: 267px;
+	}
+
+.header-nav {
+	width: 400px;
+	max-width: 650px;
+	margin-right: 26px;
+}
+
+.breadcrumbs {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+																							/*Фильтры*/
+.filters {}
+
+.group-filters {
+	height: 37px;
+	width: auto;
+	margin-top: 11px;
+	margin-bottom: 8px;
+}
+
+.filters-list {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+/*-----------------------------сортировка*/
+.filters-sort {
+	min-width: 195px;
+	height:59px;
+	margin-right: 16px;
+	margin-bottom: 16px;
+}
+
+.sort-field {
+	height: 37px;
+	margin-left: 17px;
+}
+
+.sort-window {
+	width: 100%;
+	height: 37px;
+}
+/*-----------------------------цена*/
+.filters-cost {
+	width: 219px;
+	height:59px;
+	margin-right: 16px;
+	margin-bottom: 16px;
+}
+
+.cost-field {
+	height: 17px;
+	margin-left: 25px;
+}
+
+/*-----------------------------Жирность*/
+.filters-fat {
+	display: flex;
+	flex-direction: row;
+	min-width: 415px;
+	margin-bottom: 16px;
+	position: relative;
+}/*как сделать что бы критерии были ниже? align-items не проходит к их классам*/
+
+.filters-fat-name{
+	position: absolute;
+	top:-15px;
+	}
+
+/*-----------------------------Наполнители*/
+.filters-filler {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	min-width: 702px;
+	margin-bottom: 16px;
+	position: relative;
+}/*как сделать что бы критерии были ниже? align-items не проходит к их классам*/
+
+.filters-filler-name {
+	position: absolute;
+	top:-15px;
+}
+
+.filters-btn { /*как сделать её по центру?*/
+	width: 145;
+	height: 37px;
+	margin-left: 15px;
+}
+/*----------------------------12 больших карточек*/
+.goods-list {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+
+.goods-item {
+	height: 322px;
+	width: 267px;
+	margin-top: 41px;
+	position: relative;
+}
+
+.goods-pay {
+	position: absolute;
+	bottom: 100px;
+}
+
+.goods-weight {
+	position: absolute;
+	bottom: 100px;
+	left: 30px;
+}
+
+.signature {
+	position: absolute;
+	bottom: -30px;
+} /* я сделаль подпись тоже div'ом. и спозиционировал его.*/
+
+.pagination {} /* думаю тут надо сделать div, прикрепить его в низ main и
+	задать ему relative. А пагинацию в него обернуть. и привязать в нижний
+	правый угол через position.	*/
+
+
+
+
+
+
+
+/*----------------------------Паодвал----------------------------------------*/
+
+.footer-page-inner {
+	display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-social {
+	display: flex;
+	align-items: center;
+}
+
+.social-btn {
+	margin-right: 23px;
+}
+
+.footer-links {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 560px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.footer-links li {
+	margin-right: 33px;
+}
+
+.footer-copyright {
+	min-height: 65px;
+	min-width: 190px;
+}
+
+
+
+
+/*d*/
