@@ -7,7 +7,6 @@ body {
 		background-color: #849d8f; /*для слайдера*/
 
 		}
-.wrapper {}
 
 .container {
 	max-width: 1200px;
@@ -256,12 +255,6 @@ body > input[type="radio"] { /*прячем верхнюю панель пере
 	padding: 0 20px;
 }
 
-.main-header {
-	height: 100px; /*для демо*/
-	background-color: rgba(0, 0, 0, 0.4); /*для демо*/
-	box-shadow: inset 0 0 0 4px #000000;  /*для демо*/
-}
-
 .slider {
 	position: relative;
 	padding-top: 270px;
@@ -367,47 +360,11 @@ body > input[type="radio"] { /*прячем верхнюю панель пере
 }
 
 
-/*------------------------сетка для index.html---------------------------*/
 
-.features-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
 
-.features-item {
-	width: 560px;
-	height: 230px;
-}
 
-.goods-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
 
-.about-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
 
-.about-list-item {
-	width: 560px;
-	height: 90px;
-	}
-
-.conversation-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.conversation-blog,
-.conversation-mail {
-	width: 560px;
-	height: 220px;
-}
 
 
 
