@@ -93,8 +93,8 @@
     margin-right:10px;
   }
   /*------------------------Поиск---------------------------*/
-
   /*??? как убрать поле поиска в икоку?*/
+
 
   /*------------------------Логин---------------------------*/
 
@@ -176,52 +176,365 @@
     color: rgba(255, 255, 255, 1);
   }
 
-/*------------------------breadcrumbs---------------------------*/
+  /*------------------------Слайдер---------------------------*/
+
+  body > input[type="radio"] { /*прячем верхнюю панель переключателя слайдера*/
+  	display: none;
+  }
+
+  .site-wrapper {
+  	min-width: 940px;
+  	min-height: 950px; /*для демо*/
+  	background-color: #849d8f;
+  	background-image: url("../img/slidergreen.png");
+  	background-repeat: no-repeat;
+  	background-position: top center;
+
+  	/*??? transition: background-image 0.5s ease,   не работает!!!
+  							background-color: 0.5s ease;*/
+  }
+
+  .site-wrapper::before,
+  .site-wrapper::after {
+  	content "";
+  	visibility: hidden;
+  }/*псевдоэлементы нужны для предзагрузки картинок 2 и 3 слайдера,
+   что бы они были в кэше*/
+
+  .site-wrapper::before,
+  .site-wrapper::after {
+  	background-image: url("../img/sliderblue.png");
+  }
+
+  .site-wrapper::before,
+  .site-wrapper::after {
+  	background-image: url("../img/sliderred.png");
+  }
+
+  .content-wrapper {
+  	width: 900px;
+  	margin: 0 auto;
+  	padding: 0 20px;
+  }
+
+  .main-header {
+  	height: 100px; /*для демо*/
+  	background-color: rgba(0, 0, 0, 0.4); /*для демо*/
+  	box-shadow: inset 0 0 0 4px #000000;  /*для демо*/
+  }
+
+  .slider {
+  	position: relative;
+  	padding-top: 270px;
+  	text-align: center;
+  	color: #ffffff;
+  }
+
+  .slide {
+  	display: none;
+  }
+
+  .slide-title {
+  	width: 700px;
+  	margin: 0 auto;
+  	margin-bottom: 30px;
+  	font-weight: 800;
+  	font-size: 60px;
+  }
+
+  .slide-btn {
+  	display: inline-block;
+  	padding: 12px 50px;
+
+  	font-weight: 600;
+  	font-size: 31px;
+  	line-height: 41px;
+  	vertical-align: top;
+  	color: #ffffff;
+  	text-decoration: none; /*???*/
+  	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  	background: #f26843;
+  	background:  -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  	background:  -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
+  	background:  linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  	border-radius: 100px;
+  	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  }
+
+  .slide-btn:hover {
+  	background:  -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  	background:  -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  	background:  linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+  }
+
+  .slide-btn:active {
+  	background:  -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  	background:  -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  	background:  linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+  }
+
+  .slider-controls {
+  	position: absolute;
+  	bottom: 25px;
+  	left: 0;
+  	z-index: 20;
+  	font-size: 0;
+  }
+
+  .slider-controls label {
+  	display: inline-block;
+  	width: 17px;
+  	height: 17px;
+  	margin-right: 8px;
+
+  	vertical-align: top;
+
+  	background-color: transparent;
+  	border: 2px solid #ffffff;
+  	border-radius: 50%;
+  	cursor: pointer; /*изменение курсора при наведении*/
+  }
+
+  #btn-1:checked ~ .site-wrapper #slide1, /*если нажимаем radio-btn-1, то внутри
+  .site-wrapper элемент с индификатором #slide1 становится display: block*/
+  #btn-2:checked ~ .site-wrapper #slide2,
+  #btn-3:checked ~ .site-wrapper #slide3 {
+  	display: block;
+  }
+
+  #btn-1:checked ~ .site-wrapper {
+  	background-color: #849d8f;
+  	background-image: url("../img/slider-green.png");
+  }
+
+  #btn-2:checked ~ .site-wrapper {
+  	background-color: #8996a6;
+  	background-image: url("../img/slider-blue.png");
+  }
+
+  #btn-3:checked ~ .site-wrapper {
+  	background-color: #9d8b84;
+  	background-image: url("../img/slider-red.png");
+  }
+
+  #btn-1:checked ~ .site-wrapper label[for="btn-1"], /*если нажимаем radio-btn-1, то внутри
+  .site-wrapper label для кнопки такой-то заливается #ffffff цветом*/
+  #btn-2:checked ~ .site-wrapper label[for="btn-2"],
+  #btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+  	background-color: #ffffff;
+  }
+
+  /*------------------------main---------------------------*/
+
+  /*------------------------2 большие карточки---------------------------*/
+  .features {
+    margin-bottom: 40px;
+  }
+
+  .features-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .features-item {
+    width: 560px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features-title,
+  .features-text {
+    margin: 20px;
+  }
+
+  .features-item:first-child {
+    background-color: #80212d;
+    background-image: url("../img/raspberry background.jpg");
+    background-size: 560px;
+    background-repeat: no-repeat;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+  }
+
+  .features-item:last-child {
+    background-color: #3f261b;
+    background-image: url("../img/chocolate background.jpg");
+    background-size: 560px;
+    background-repeat: no-repeat;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+  }
+
+  .features-button {
+    margin-right: 21px;
+    margin-bottom: 21px;
+    align-self: flex-end;
+
+    display: inline-block;
+  	padding: 12px 50px;
+
+    font-weight: 400;
+  	font-size: 18px;
+  	line-height: 24px;
+  	vertical-align: top;
+  	color: #ffffff;
+  	text-decoration: none; /*???*/
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    border-radius: 100px;
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    }
+
+  /*------------------------4 карточки хита---------------------------*/
+
+  .goods {
+    margin-bottom: 38px;
+  }
+
+  .goods-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .goods-item {
+    position: relative;
+    padding: 6px 13px 22px 13px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 293px;
+    margin-bottom: -41px;
+  }
+
+  .goods-item::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../img/hit.png") no-repeat;
+    width: 61px;
+    height: 61px;
+    top: 8px;
+    left: 12px;
+    z-index: 100;
+  }
+
+  .goods-price {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+    font-size: 45px;
+    line-height: 45px;
+    padding-left: 0;
+  }
 
 
-  .breadcrumbs {
-  	margin: 0;
-  	padding: 0;
-  	margin-bottom: 10px;
+  .goods-weight {
+    position: absolute;
+    bottom: 100px;
+    left: 30px;
+}
+
+
+
+  /*------------------------О компании---------------------------*/
+
+  .about {
+    margin-bottom: 40px;
+    background-color: #eadcbe;
+    background: url("../img/waffel.jpg") /*no-*/repeat;
+    box-sizing: border-box;
+    padding: 24px 20px;
+    color: rgba(0, 0, 0, 1);
+    }
+
+  .about-head {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 22px;
+  }
+
+  .about-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .about-list-item {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 56px;
+    width: 560px;
+    min-height: 90px; /*исправить на padding и margin*/
+  }
+
+  .about-list-item:nth-child(1)::before {
+    background-image: url("../img/icon-ice.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    display: block;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+  }
+
+  .about-list-item:nth-child(2)::before {
+    background-image: url("../img/icon-cow.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    display: block;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+  }
+
+  .about-list-item:nth-child(3)::before {
+    background-image: url("../img/icon-leaf.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    display: block;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
+  }
+
+  .about-list-item:nth-child(4)::before {
+    background-image: url("../img/icon-thermometer.png");
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    display: block;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
   }
 
 
 
-	/*------------------------сетка для index.html---------------------------*/
 
-	.features-list {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
 
-	.features-item {
-		width: 560px;
-		height: 230px;
-	}
-
-	.goods-list {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
-.about {
-	margin-bottom: 40px;
-}
-
-	.about-list {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	.about-list-item {
-		width: 560px;
-		height: 90px; /*исправить на padding и margin*/
-		}
+  /*------------------------2 большие карточки---------------------------*/
 
 	.conversation{
 		margin-bottom: 40px;
@@ -232,14 +545,94 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
-
 	}
 
-	.conversation-blog,
+  .conversation-blog {/*исправить на padding и margin*/
+    width: 560px; /*??? как сделать правильно картинку?*/
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    background-image: url("../img/strawberry background.jpg");
+    background-position-x: -35px;
+    background-position-y: -200px;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    color: rgba(0, 0, 0, 1);
+    border-radius: 10px;
+  }
+
+  .conversation-blog-content {
+    width: 285px;
+    margin: 0 20px;
+  }
+
+  .conversation-blog a {/* ??? исправить на padding и margin*/
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color:  rgba(0, 0, 0, 1);
+  }
+
+
+  .conversation-blog-head {
+    margin: 20px 20px 2px 20px;
+  }
+
 	.conversation-mail {
-		width: 560px; /*исправить на padding и margin*/
-		height: 220px; /*исправить на padding и margin*/
-	}
+    width: 560px;
+    background: #f8f7f4;
+    background-image: url("../img/pattern-mail.png");
+    border-radius: 10px;
+    min-height: 220px;
+  }
+  .wrapper-mail {
+    width: 548px;
+    background: #f8f7f4;
+    padding: 28px 20px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5a5a5a;
+    box-sizing: border-box;
+    margin: 0 auto;
+    vertical-align: middle;
+    border-radius: 11px;
+    min-height: 208px;
+    margin-top: 6px;
+  }
+
+  .wrapper-p {
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    margin-bottom: 35px;
+  }
+
+  .conversation-form-group-one
+  input[type="text"]{
+    width: 338px;
+    border: 1px solid #b2b2b2;
+    border-radius: 10px;
+    padding: 13px;
+    margin-right: 10px;
+  }
+
+  .conversation-form-group-two {
+    display: inline-block;
+  	padding: 12px 50px;
+    font-weight: 400;
+  	font-size: 18px;
+  	line-height: 24px;
+  	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    border-radius: 100px;
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+
+  }
+
+  /*------------------------Карта---------------------------*/
 
 	.contacts {
 		position: relative;
@@ -255,14 +648,65 @@
 		background-size: cover;
 	}
 	.contacts-block {
-		width: : 302px;
-		height: 305px; /*временно-*/
-		background-color: cyan;
-		position: absolute;
-		top: 100px;
-		right: 0px;
+    position: absolute;
+    right: 27px;
+    top: 63px;
+    width: 302px;
+    border-radius: 10px;
+    background-color: white;
+    color: #323232;
+    padding: 28px 10px 10px 25px;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    min-height: 305px;
 		z-index: 10;
 	}
+  .contacts-title {
+    display: block;
+  }
+
+  .contacts-adress {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    padding-right: 40px;
+    margin-bottom: 21px;
+  }
+
+  .contacts-info-order {
+    display: block;
+  }
+
+  .contacts-info a {
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    padding-right: 40px;
+  }
+
+  .contacts-info-work {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .contacs-btn {
+    display: block;
+    padding: 10px 27px;
+    font-weight: 700;
+  	font-size: 18px;
+  	line-height: 24px;
+  	color: #ffffff;
+  	text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    border-radius: 100px;
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  }
+
 
 	/*----------------------------Паодвал----------------------------------------*/
 
@@ -271,6 +715,7 @@
 	  flex-direction: row;
 	  justify-content: space-between;
 		flex-wrap: wrap;
+    margin-bottom: 24px;
 	}
 
 	.footer-social {
@@ -301,14 +746,14 @@
 	}
 
 	.social-link:hover {
-		border: 2px solid rgba(218, 226, 222, 0.7);
+		border: 3px solid rgba(255, 255, 255, 0.7);
 		opacity: 1;
 	}
 
 	.social-link:active {
 		border-radius: 50%;
 	  background-color: rgba(255, 255, 255, 0);
-	  box-shadow: inset 0px 2px 1px 0px rgb(136, 136, 136);
+	  box-shadow: inset 0px 2px 1px 0px rgba(136, 136, 136, 1);
 	}
 
 	.social-link-tw {
@@ -337,34 +782,61 @@
 
 
 	.footer-links { /*??? почему не отображается шрифт?*/
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		list-style-type:none;
-		width: 330px;
-		height: 40px;
-		margin: 0 124px 0 104px;
+    list-style: none;
+    height: 40px;
+    width: 340px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-content: center;
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
 	}
+
+  .footer-links::before{
+  background-image: url("../img/icon-heart.png");
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  display: block;
+  z-index: 100;
+  top: 3px;
+  left: -22px;
+  }
 
 	.footer-links li {
 		margin-right: 33px;
+    text-decoration: none;
 	}
 
- 	.icon-heart { /*??? почему не отображается*/
-		display: block;
-		background-image: url("../img/icon-heart.png");
-	}
+  .footer-links a {
+    color: white;
+  }
 
 	.footer-copyright {
 		margin-top: -19px;
 		margin-right: 0;
-		height: 65px;
-		width: 190px;
+    color: white;
+		/*height: 65px;
+		width: 190px;*/
 	}
+
+  .footer-copyright a {
+    color: white;
+  }
 
 /*------------------------------------------------------------*/
 
 																							/*Фильтры*/
+
 .filters {}
 
 .filters-list {
@@ -448,35 +920,6 @@
 	margin-left: 15px;
 }
 /*----------------------------12 больших карточек*/
-.goods {
-	margin-bottom: 38px;
-}
-
-.goods-list {
-	display:flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-
-}
-
-.goods-item {
-	height: 322px;
-	width: 267px;
-	margin-top: 41px;
-	position: relative;
-}
-
-.goods-pay {
-	position: absolute;
-	bottom: 100px;
-}
-
-.goods-weight {
-	position: absolute;
-	bottom: 100px;
-	left: 30px;
-}
 
 .signature {
 	position: absolute;
@@ -487,6 +930,14 @@
 	задать ему relative. А пагинацию в него обернуть. и привязать в нижний
 	правый угол через position.	*/
 
+  /*------------------------breadcrumbs---------------------------*/
+
+
+  .breadcrumbs {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+  }
 
 
 
@@ -496,158 +947,7 @@
 
 
 
-/*тут будет слайдер О_о */
 
-body > input[type="radio"] { /*прячем верхнюю панель переключателя слайдера*/
-	display: none;
-}
-
-.site-wrapper {
-	min-width: 940px;
-	min-height: 950px; /*для демо*/
-	background-color: #849d8f;
-	background-image: url("../img/slidergreen.png");
-	background-repeat: no-repeat;
-	background-position: top center;
-
-	/*transition: background-image 0.5s ease,   не работает!!!
-							background-color: 0.5s ease;*/
-}
-
-/*псевдоэлементы нужны для предзагрузки картинок 2 и 3 слайдера,
- что бы они были в кэше*/
-
-.site-wrapper::before,
-.site-wrapper::after {
-	content "";
-	visibility: hidden;
-}
-
-.site-wrapper::before,
-.site-wrapper::after {
-	background-image: url("../img/sliderblue.png");
-}
-
-.site-wrapper::before,
-.site-wrapper::after {
-	background-image: url("../img/sliderred.png");
-}
-
-.content-wrapper {
-	width: 900px;
-	margin: 0 auto;
-	padding: 0 20px;
-}
-
-.main-header {
-	height: 100px; /*для демо*/
-	background-color: rgba(0, 0, 0, 0.4); /*для демо*/
-	box-shadow: inset 0 0 0 4px #000000;  /*для демо*/
-}
-
-.slider {
-	position: relative;
-	padding-top: 270px;
-	text-align: center;
-	color: #ffffff;
-}
-
-.slide {
-	display: none;
-}
-
-.slide-title {
-	width: 700px;
-	margin: 0 auto;
-	margin-bottom: 30px;
-	font-weight: 800;
-	font-size: 60px;
-}
-
-.slide-btn {
-	display: inline-block;
-	padding: 12px 50px;
-
-	font-weight: 600;
-	font-size: 31px;
-	line-height: 41px;
-	vertical-align: top;
-	color: #ffffff;
-	text-decoration: none; /*???*/
-	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-	background: #f26843;
-	background:  -moz-linear-gradient(top, #f26843 0%, #e74a35 100%);
-	background:  -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
-	background:  linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-	border-radius: 100px;
-	box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-}
-
-.slide-btn:hover {
-	background:  -moz-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-	background:  -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
-	background:  linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.slide-btn:active {
-	background:  -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-	background:  -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
-	background:  linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.slider-controls {
-	position: absolute;
-	bottom: 25px;
-	left: 0;
-	z-index: 20;
-	font-size: 0;
-}
-
-.slider-controls label {
-	display: inline-block;
-	width: 17px;
-	height: 17px;
-	margin-right: 8px;
-
-	vertical-align: top;
-
-	background-color: transparent;
-	border: 2px solid #ffffff;
-	border-radius: 50%;
-	cursor: pointer; /*изменение курсора при наведении*/
-}
-
-#btn-1:checked ~ .site-wrapper #slide1, /*если нажимаем radio-btn-1, то внутри
-.site-wrapper элемент с индификатором #slide1 становится display: block*/
-#btn-2:checked ~ .site-wrapper #slide2,
-#btn-3:checked ~ .site-wrapper #slide3 {
-	display: block;
-}
-
-#btn-1:checked ~ .site-wrapper {
-	background-color: #849d8f;
-	background-image: url("../img/slider-green.png");
-}
-
-#btn-2:checked ~ .site-wrapper {
-	background-color: #8996a6;
-	background-image: url("../img/slider-blue.png");
-}
-
-#btn-3:checked ~ .site-wrapper {
-	background-color: #9d8b84;
-	background-image: url("../img/slider-red.png");
-}
-
-#btn-1:checked ~ .site-wrapper label[for="btn-1"], /*если нажимаем radio-btn-1, то внутри
-.site-wrapper label для кнопки такой-то заливается #ffffff цветом*/
-#btn-2:checked ~ .site-wrapper label[for="btn-2"],
-#btn-3:checked ~ .site-wrapper label[for="btn-3"] {
-	background-color: #ffffff;
-}
 
 
 
