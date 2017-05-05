@@ -1,76 +1,385 @@
-body {
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto.woff") format('woff'),
+		url("../fonts/Roboto.woff2") format("woff2");
+		font-weight: 400;
+    font-style: normal;
+} /*Сделать как выше*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Robotomedium.woff") format("woff"),
+		url("../fonts/Robotomedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+		src: url("../fonts/Robotobold.woff") format("woff"),
+		url("../fonts/Robotobold.woff2") format("woff2");
+		font-weight: 700;
+    font-style: normal;
+}
+
+  body {
 		font-size: 16px;
     line-height: 22px;
-    font-weight: normal;
-    font-family: "roboto regular" ;
+    font-weight: 400;
+    font-family: "Roboto"; /*??? нужно ли здесь оставлять шрифт?*/
 
 		background-color: #849d8f; /*для слайдера*/
-
 		}
-.wrapper {}
+  .wrapper {position: relative;}
 
-.container {
-	max-width: 1200px;
-	padding-left: 27px;
-	padding-right: 27px;
-	margin: 0 auto;
+  .container {
+  	width: 1200px;
+  	padding-left: 27px;
+  	padding-right: 27px;
+  	margin: 0 auto;
+  	}
+
+  /*------------------------header---------------------------*/
+
+
+  .header-page {
+  }
+
+  .header-page-inner {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: flex-start;
+  	margin-bottom: 24px;
+  }
+
+  .header-logo {
+  	width: 154px;
+  	height: 64px;
+    margin-top: 9px;
+  	}
+
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+    max-width: 650px;
+    margin: 20px 26px 0 21px;
+
+    }
+
+  .header-nav li {
+    margin-right: 29px;
+    }
+  .header-nav li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .header-actions {
+    margin-left: auto;
+  	position: relative; /*сделал, для отправной точки крепежа контактов*/
+  	}
+
+  .header-actions-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+  }
+
+  .header-actions-list li {
+    margin-right:10px;
+  }
+  /*------------------------Поиск---------------------------*/
+
+  /*??? как убрать поле поиска в икоку?*/
+
+  /*------------------------Логин---------------------------*/
+
+  .actions-enter {
+    padding: 5px 15px 5px 44px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    width: 93px;
+    height: 32px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .actions-enter::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 16px;
+  width: 20px;
+  height: 19px;
+  background: transparent url("../img/icon-enter.png") no-repeat;
+  color: rgba(255, 255, 255, 1);
+  }
+
+  .actions-enter:hover::before {
+    color: rgba(0, 0, 0, 1); /*??? почему не меняется и закрашивается?*/
+  }
+
+  .actions-enter:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+  }
+
+/*------------------------корзина---------------------------*/
+
+  .actions-basket {
+    padding: 5px 34px 5px 44px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    height: 32px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    margin-right: -10px; /*??? откуда отступ тут? +1px?*/
+  }
+
+  .actions-basket::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 16px;
+  width: 21px;
+  height: 20px;
+  background: transparent url("../img/icon-basket.png") no-repeat;
+  color: rgba(255, 255, 255, 1);
+  }
+
+  .actions-basket:hover::before {
+    color: rgba(0, 0, 0, 1); /*??? почему не меняется и закрашивается?*/
+  }
+
+  .actions-basket:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+  }
+
+/*------------------------Адрес---------------------------*/
+
+  .header-contacts {
+    position: absolute;
+    top:auto;
+    right: 0px;
+    width: 165px; /*??? почему текст не вмещается, по макету всё ровно,*/
+    color: rgba(255, 255, 255, 1);
+  }
+  .header-contacts a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+  }
+
+/*------------------------breadcrumbs---------------------------*/
+
+
+  .breadcrumbs {
+  	margin: 0;
+  	padding: 0;
+  	margin-bottom: 10px;
+  }
+
+
+
+	/*------------------------сетка для index.html---------------------------*/
+
+	.features-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
-/*флексы*/
-.header-page {
-
-}
-
-.header-page-inner {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	margin-bottom: 24px;
-}
-
-.header-logo {
-	width: 154px;
-	height: 64px;
-	margin-right: 10px;
-	}
-.header-actions {
-	width: 267px;
-	position: relative; /*сделал, для отправной точки крепежа контактов*/
+	.features-item {
+		width: 560px;
+		height: 230px;
 	}
 
-.header-nav {
-	width: 400px;
-	max-width: 650px;
-	margin-right: 26px;
+	.goods-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+.about {
+	margin-bottom: 40px;
 }
 
-.breadcrumbs {
-	margin: 0;
-	padding: 0;
-	margin-bottom: 10px;
-}
+	.about-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
 
-.header-contacts {
-	position: absolute;
-	top:auto;
-	left:auto;
+	.about-list-item {
+		width: 560px;
+		height: 90px; /*исправить на padding и margin*/
+		}
 
-}
+	.conversation{
+		margin-bottom: 40px;
+	}
+
+	.conversation-list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+	}
+
+	.conversation-blog,
+	.conversation-mail {
+		width: 560px; /*исправить на padding и margin*/
+		height: 220px; /*исправить на padding и margin*/
+	}
+
+	.contacts {
+		position: relative;
+		}
+
+	.contacts-map {
+		background-image: url("../img/map.jpg");
+		height: 430px;
+		margin-bottom: 37px;
+		background-repeat: no-repeat;
+		background-position: center; /*поставить в % фоны в академии!!*/
+		background-color: #f6f0d7;
+		background-size: cover;
+	}
+	.contacts-block {
+		width: : 302px;
+		height: 305px; /*временно-*/
+		background-color: cyan;
+		position: absolute;
+		top: 100px;
+		right: 0px;
+		z-index: 10;
+	}
+
+	/*----------------------------Паодвал----------------------------------------*/
+
+	.footer-page-inner {
+		display: flex;
+	  flex-direction: row;
+	  justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.footer-social {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 268px;
+		height: 50px;
+	}
+
+	.social-link {
+		margin-right: 11px;
+		display: block;
+		text-decoration: none;
+		box-sizing: border-box;
+		width: 38px;
+		height: 38px;
+		background-color: transparent;
+		opacity: 0.8;/*узнать какого хе*/
+		font-size: 0;
+		border-radius: 50%;
+		border: 2px solid rgba(153, 153, 153, 0.5);
+	}
+
+	.social-link:hover {
+		border: 2px solid rgba(218, 226, 222, 0.7);
+		opacity: 1;
+	}
+
+	.social-link:active {
+		border-radius: 50%;
+	  background-color: rgba(255, 255, 255, 0);
+	  box-shadow: inset 0px 2px 1px 0px rgb(136, 136, 136);
+	}
+
+	.social-link-tw {
+		background-image: url("../img/icon-tw.png");
+		background-repeat: no-repeat;
+		background-size: cover;  /*узнать какого хе*/
+	}
+
+	.social-link-vk {
+		background-image: url("../img/icon-vk.png");
+		background-repeat: no-repeat;
+		background-size: cover;  /*узнать какого хе*/
+	}
+
+	.social-link-fb {
+		background-image: url("../img/icon-fb.png");
+		background-repeat: no-repeat;
+		background-size: cover;  /*узнать какого хе*/
+	}
+
+	.social-link-in {
+		background-image: url("../img/icon-in.png");
+		background-repeat: no-repeat;
+		background-size: cover;  /*узнать какого хе*/
+	}
+
+
+	.footer-links { /*??? почему не отображается шрифт?*/
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		list-style-type:none;
+		width: 330px;
+		height: 40px;
+		margin: 0 124px 0 104px;
+	}
+
+	.footer-links li {
+		margin-right: 33px;
+	}
+
+ 	.icon-heart { /*??? почему не отображается*/
+		display: block;
+		background-image: url("../img/icon-heart.png");
+	}
+
+	.footer-copyright {
+		margin-top: -19px;
+		margin-right: 0;
+		height: 65px;
+		width: 190px;
+	}
+
+/*------------------------------------------------------------*/
+
 																							/*Фильтры*/
 .filters {}
 
+.filters-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
 .group-filters {
-	height: 37px;
-	width: auto;
+	height: 37px; /*временно */
 	margin-top: 11px;
 	margin-bottom: 8px;
 }
 
-.filters-list {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-}
 /*-----------------------------сортировка*/
 .filters-sort {
 	min-width: 195px;
@@ -103,16 +412,19 @@ flex-wrap: wrap;
 
 /*-----------------------------Жирность*/
 .filters-fat {
-	display: flex;
-	flex-direction: row;
-	min-width: 415px;
+	width: 415px; /*потом убрать*/
 	margin-bottom: 16px;
-	position: relative;
 }/*как сделать что бы критерии были ниже? align-items не проходит к их классам*/
 
-.filters-fat-name{
-	position: absolute;
-	top:-15px;
+.group-list {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+ align-items: center;
+}
+
+.filters-fat-name {
 	}
 
 /*-----------------------------Наполнители*/
@@ -136,11 +448,15 @@ flex-wrap: wrap;
 	margin-left: 15px;
 }
 /*----------------------------12 больших карточек*/
+.goods {
+	margin-bottom: 38px;
+}
+
 .goods-list {
 	display:flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 
 }
 
@@ -177,40 +493,7 @@ flex-wrap: wrap;
 
 
 
-/*----------------------------Паодвал----------------------------------------*/
 
-.footer-page-inner {
-	display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.footer-social {
-	display: flex;
-	align-items: center;
-}
-
-.social-btn {
-	margin-right: 23px;
-}
-
-.footer-links {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-	width: 560px;
-	padding-left: 100px;
-	padding-right: 100px;
-}
-
-.footer-links li {
-	margin-right: 33px;
-}
-
-.footer-copyright {
-	min-height: 65px;
-	min-width: 190px;
-}
 
 
 /*тут будет слайдер О_о */
@@ -367,47 +650,7 @@ body > input[type="radio"] { /*прячем верхнюю панель пере
 }
 
 
-/*------------------------сетка для index.html---------------------------*/
 
-.features-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.features-item {
-	width: 560px;
-	height: 230px;
-}
-
-.goods-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.about-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.about-list-item {
-	width: 560px;
-	height: 90px;
-	}
-
-.conversation-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
-.conversation-blog,
-.conversation-mail {
-	width: 560px;
-	height: 220px;
-}
 
 
 
