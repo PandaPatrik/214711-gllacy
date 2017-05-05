@@ -58,15 +58,152 @@
     margin-top: 9px;
   	}
 
-  .header-nav {
+  .main-menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     list-style: none;
     max-width: 650px;
     margin: 20px 26px 0 21px;
+  }
+  .menu .main-menu {
+  	margin: 0;
+  	padding: 0;
+  	width: 674px;
+  	margin-right: 26px;
+  	margin-left: 15px;
+  	list-style: none;
+  	display: flex;
+  	justify-content: flex-start;
+  	font-size: 16px;
+  	line-height: 18px;
+  	font-weight: 700;
+  	margin-top: -2px;
+  }
 
-    }
+  .menu-item {
+  	position: relative;
+    margin-right: 20px;
+  }
+
+  .menu-item a {
+    color: white;
+    font-weight: 400;
+  }
+
+  .menu-item > a{
+    text-decoration: none;
+  	border-bottom: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .menu-item > a:hover {
+  	background: #f7f6f3;
+  	border-radius: 20px;
+  	color: #333;
+  	font-weight: 700;
+  	padding: 5px 14px 6px 14px;
+  	margin-left: -14px;
+  	margin-right: -13px;
+  }
+
+  .menu-item > a:active {
+  	box-shadow: 0px 2px 1px 0px rgba(105, 105, 105, 1) inset;
+  }
+
+  .menu-item .active {
+  	background-color: #d07058;
+  	padding: 5px 14px 6px 14px;
+  	border-radius: 20px;
+  	margin-right: -13px;
+  	margin-left: -14px;
+  }
+
+  .menu-hide {
+  	display: none;
+  	position: absolute;
+  	top: 28px;
+    left: -16px;
+  	width: 143px;
+  	background-color: #f8f7f4;
+  	border-radius: 5px;
+  	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .menu-hide ul {
+  	margin: 0;
+  	padding: 0;
+  }
+
+  .menu-hide .hide-item {
+  	margin-right: 0;
+  	margin-bottom: 4px;
+  	padding: 8px 0 7px 20px;
+    list-style: none;
+  }
+
+  .menu-hide .hide-item:hover {
+  	background-color: #fbded7;
+  }
+
+  .menu-hide .hide-item:active {
+  	background-color: #f6b5a5;
+  }
+
+  .menu-hide .catalog-active,
+  .menu-hide .catalog-active:hover,
+  .menu-hide .catalog-active:active{
+  	background-color: #d07058;
+  }
+
+  .menu-hide .hide-item:first-child {
+  	padding-bottom: 8px;
+  	padding-top: 11px;
+  	border-bottom: 1px solid #d1d0ce;
+  	margin-bottom: 0;
+  }
+
+  .menu-hide .hide-item:first-child:hover,
+  .menu-hide .hide-item:first-child:active{
+  	border-radius: 5px 5px 0 0;
+  }
+
+  .menu-hide .hide-item:last-child:hover,
+  .menu-hide .hide-item:last-child:active{
+  	border-radius: 0 0 5px 5px;
+  }
+
+  .menu-hide .hide-item:last-child{
+  	margin-bottom: 0
+  }
+
+  .menu-hide .hide-item a {
+  	color: #323232;
+  	font-size: 14px;
+  	line-height: 16px;
+  	font-weight: 400;
+  }
+
+  .menu-hide .catalog-active a{
+  	color: #fff;
+  }
+
+  .hide-item:first-child a {
+  	font-weight: 700;
+  }
+
+  .menu-item:hover .menu-hide {
+  	display: block;
+  }
+
+  .catalog:hover {
+  	height: 32px;
+  	margin-top: 13px;
+  }
+
+  .catalog:hover ~ .menu-item {
+  	margin-top: 13px;
+  }
 
   .header-nav li {
     margin-right: 29px;
@@ -94,7 +231,17 @@
   }
   /*------------------------Поиск---------------------------*/
   /*??? как убрать поле поиска в икоку?*/
+  .actions-searching {
+	  }
 
+  .actions-searching::before{
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: rgba(255,255,255,0.2) url(../img/icon-find.png) no-repeat 50% 50%;
+    border-radius: 50%;
+  }
 
   /*------------------------Логин---------------------------*/
 
@@ -120,13 +267,132 @@
   color: rgba(255, 255, 255, 1);
   }
 
-  .actions-enter:hover::before {
+  .actions-enter::before:hover {
     color: rgba(0, 0, 0, 1); /*??? почему не меняется и закрашивается?*/
   }
 
   .actions-enter:hover {
     background-color: rgba(255, 255, 255, 1);
     color: rgba(0, 0, 0, 1);
+  }
+  /*------------------------скрытый блок login----------------*/
+
+  .enter-wrap { /*???почему он не показывается!?!?!??!?!*/
+    display: none;
+    position: absolute;
+    top: 27px;
+    right: 0;
+    width: 277px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    background-color: #f8f7f4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 20px 17px 20px 19px;
+    z-index: 100;
+  }
+
+  .enter-form {
+    position: relative;
+  }
+
+  .enter-form input[type="text"],
+  .enter-form input[type="password"] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 13px 15px;
+    border: 1px solid #d3d3d2;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .enter-form label {
+    position: absolute;
+    color: #b2b2b2;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .enter-form label[for="name"] {
+    top: 10px;
+    left: 15px;
+  }
+
+  .enter-form label[for="pass"] {
+    top: 73px;
+    left: 15px;
+  }
+
+  .enter-form input[type="text"]:focus + label {
+    top: -15px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #5b9ddf;
+  }
+
+  .enter-form input[type="password"]:focus + label {
+    top: 48px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #5b9ddf;
+  }
+
+  .enter-form input[type="text"]:hover,
+  .enter-form input[type="password"]:hover {
+    border: 2px solid #c7c6c5;
+    padding: 12px 14px;
+  }
+
+  .enter-form input[type="text"]:focus,
+  .enter-form input[type="password"]:focus {
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid #8fbdec;
+    padding: 12px 14px;
+  }
+
+  .register-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .right-block a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    color: #323232;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .right-block a:hover,
+  .right-block a:active {
+    color: #e84d37;
+    border-bottom: 1px solid rgba(232,77,55,0.3);
+  }
+
+  .enter-form input[type="submit"] {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, #f26843, #e74a35);
+    box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 10px 23px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .header-actions-link {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    position: relative;
+    margin-left: 10px;
+    padding: 8px 17px 8px 43px;
   }
 
 /*------------------------корзина---------------------------*/
@@ -150,11 +416,11 @@
   width: 21px;
   height: 20px;
   background: transparent url("../img/icon-basket.png") no-repeat;
-  color: rgba(255, 255, 255, 1);
   }
 
   .actions-basket:hover::before {
     color: rgba(0, 0, 0, 1); /*??? почему не меняется и закрашивается?*/
+    background-image: transparent url("../img/icon-redbasket.png") no-repeat;
   }
 
   .actions-basket:hover {
@@ -428,6 +694,7 @@
   }
 
   .goods-price {
+    position: relative;
     color: rgba(255, 255, 255, 1);
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
     font-size: 45px;
@@ -435,25 +702,43 @@
     padding-left: 0;
   }
 
+  .goods-pay {
+    position: absolute;
+    font-size: 45px;
+    line-height: 45px;
+    bottom: 10px;
+    left:10px;
+  }
 
   .goods-weight {
     position: absolute;
-    bottom: 100px;
-    left: 30px;
-}
+    font-size: 30px;
+    line-height: 45px;
+    bottom: 4px;
+    left: 90px;
+  }
 
+  .goods-item-link {
+    color: white;
+  }
 
+  .goods-item-name {
+    margin-top: 0px;
+  }
 
   /*------------------------О компании---------------------------*/
 
   .about {
+    box-sizing: border-box;
     margin-bottom: 40px;
     background-color: #eadcbe;
-    background: url("../img/waffel.jpg") /*no-*/repeat;
-    box-sizing: border-box;
+    background: url("../img/waffel.jpg") repeat;
     padding: 24px 20px;
     color: rgba(0, 0, 0, 1);
+
+
     }
+
 
   .about-head {
     font-size: 24px;
@@ -832,6 +1117,148 @@
   .footer-copyright a {
     color: white;
   }
+
+/*------------------Форма обратной связи-----------------------------*/
+
+  .modal-contact-us {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 477px;
+    padding: 20px 25px 25px 24px;
+    background-color: #f8f7f4;
+    border-radius: 5px;
+    color: #323232;
+    z-index: 200;
+  }
+
+  .modal-contacts-show,
+  .modal-overlay-show {
+    display: block;
+  }
+
+  .modal-contacts-show {
+    animation: bounce 0.3s;
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    display: block;
+    width: 18px;
+    height: 17px;
+    background: url(../img/cross.png) no-repeat 50% 50%;
+    right: 20px;
+    top: 25px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+  }
+
+  .modal-contact-us .send-btn {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, #f26843, #e74a35);
+    box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
+    border-radius: 50px;
+    padding: 12px 23px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    float: right;
+  }
+
+  .modal-contact-us p {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    margin-bottom: 23px;
+  }
+
+  .modal-contact-us input[type="text"] {
+    width: 267px;
+    box-sizing: border-box;
+    border: 1px solid #d3d3d2;
+    padding: 11px 14px;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #323232;
+    margin-bottom: 20px;
+    font-family: "Roboto", "Arial", sans-serif;
+    z-index:5;
+  }
+
+  .modal-contact-us label {
+    position: absolute;
+    display: block;
+    cursor:text;
+    left: 14px;
+    color: #999;
+    z-index:3;
+  }
+
+  .modal-contact-us input[type="text"]:focus + label,
+  .modal-contact-us textarea:focus + label {
+    transform: translatey(-30px);
+    font-size: 11px;
+    line-height: 13px;
+    color: #5b9ddf;
+  }
+
+  .modal-contact-us input[type="text"]:focus,
+  .modal-contact-us textarea:focus {
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid #8fbdec;
+    padding: 10px 13px;
+  }
+
+  .modal-contact-us label[for="your-name"] {
+    top: 85px;
+    left: 39px;
+  }
+
+  .modal-contact-us label[for="your-email"] {
+    top: 154px;
+    left: 39px;
+  }
+
+  .modal-contact-us label[for="mail-body"] {
+    top: 222px;
+    left: 39px;
+  }
+
+
+  .modal-contact-us textarea {
+    display: block;
+    width: 100%;
+    height: 155px;
+    box-sizing: border-box;
+    border: 1px solid #d3d3d2;
+    padding: 11px 14px;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #323232;
+    margin-bottom: 25px;
+  }
+
+  .modal-contact-us input:hover,
+  .modal-contact-us textarea:hover {
+    border: 2px solid #c7c6c5;
+    padding: 10px 13px;
+  }
+
+
+
 
 /*------------------------------------------------------------*/
 

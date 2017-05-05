@@ -18,16 +18,28 @@
               <a href="#"><img src="img/logo.png" widgh="154" height="64" alt="Глэйси"></a>
             </div>
             <!--Навигация-->
-            <ul class="header-nav">
-              <li><a href="#">Каталог</a></li>
-              <li><a href="#">Доставка и оплата</a></li>
-              <li><a href="#">О компании</a></li>
+            <ul class="main-menu">
+              <li class="menu-item catalog">
+                <a href="#">Каталог</a>
+                <div class="menu-hide">
+									<ul>
+										<li class="hide-item"><a href="#">Новинки</a></li>
+										<li class="hide-item"><a href="catalog.html">Сливочное</a></li>
+										<li class="hide-item"><a href="#">Щербеты</a></li>
+										<li class="hide-item"><a href="#">Фруктовый лед</a></li>
+										<li class="hide-item"><a href="#">Мелорин</a></li>
+									</ul>
+								</div>
+              </li>
+              <li class="menu-item"><a href="#">Доставка и оплата</a></li>
+              <li class="menu-item"><a href="#">О компании</a></li>
             </ul>
             <!--Кнопки-->
             <div class="header-actions">
               <ul class="header-actions-list">
+
                 <li class="header-actions-item">
-                  <span class="header-actions-icon"></span> <!-- Иконка -->
+                  <span class="header-actions-icon actions-searching"></span> <!-- Иконка -->
                   <form action="#" method="post">
                     <label for="serching">Поиск..</label>
                     <input type="text" name="serching" id="serching">
@@ -35,9 +47,23 @@
                 </li>
 
                 <li class="header-actions-item">
-                  <span class="header-actions-enter"></span> <!-- Иконка -->
+                  <span class="header-actions-enter"></span>
                   <a href="#" class="header-actions-link actions-enter">Вход</a>
-                  <!--скрытый блок-->
+                  <div class="enter-wrap">
+  									<form class="enter-form" method="post">
+  										<input type="text" name="name" id="name">
+  										<label for="name">Имя пользователя</label>
+  										<input type="password" name="pass" id="pass">
+  										<label for="pass">Пароль</label>
+  										<div class="register-block">
+  											<input type="submit" name="enter-btn" id="enter-btn" value="Войти">
+  											<div class="right-block">
+  												<a href="#">Забыли пароль?</a>
+  												<a href="#">Новая регистрация</a>
+  											</div>
+  										</div>
+  									</form>
+  								</div>
                 </li>
 
                 <li class="header-actions-item">
@@ -273,7 +299,7 @@
         </section>
       </main>
       <!--Подвал-->
-    <footer class="footer-page">
+      <footer class="footer-page">
       <div class="container">
         <div class="footer-page-inner">
 
@@ -299,6 +325,20 @@
       </div>
     </footer>
     </div>
+
+    <div class="modal-contact-us">
+			<p>Мы обязательно вам ответим!</p>
+			<button class="modal-close-btn" type="button" title="Закрыть"></button>
+			<form method="post" action="https://htmlacademy.ru">
+				<input type="text" name="your-name" id="your-name">
+				<label for="your-name">Как вас зовут?</label>
+				<input type="text" name="your-email" id="your-email">
+				<label for="your-email">Ваш почта для ответа?</label>
+				<textarea name="mail-body" id="mail-body"></textarea>
+				<label for="mail-body">Напишите что-нибудь...</label>
+				<input type="submit" class="send-btn" value="Отправить">
+			</form>
+		</div>
 
   </body>
 </html>
