@@ -7,7 +7,7 @@
 } /*Сделать как выше*/
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     src: url("../fonts/Robotomedium.woff") format("woff"),
 		url("../fonts/Robotomedium.woff2") format("woff2");
     font-weight: 500;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto';
+    font-family: "Roboto";
 		src: url("../fonts/Robotobold.woff") format("woff"),
 		url("../fonts/Robotobold.woff2") format("woff2");
 		font-weight: 700;
@@ -63,71 +63,66 @@
     flex-direction: row;
     justify-content: flex-start;
     list-style: none;
-    max-width: 650px;
-    margin: 20px 26px 0 21px;
-  }
-  .menu .main-menu {
-  	margin: 0;
-  	padding: 0;
-  	width: 674px;
-  	margin-right: 26px;
-  	margin-left: 15px;
-  	list-style: none;
-  	display: flex;
-  	justify-content: flex-start;
-  	font-size: 16px;
-  	line-height: 18px;
-  	font-weight: 700;
-  	margin-top: -2px;
+    width: 396px;
   }
 
   .menu-item {
+    display: inline-block;
+    vertical-align: top;
   	position: relative;
-    margin-right: 20px;
+    margin-right: 6px;
   }
 
-  .menu-item a {
+  .menu-item:hover .menu-link {
+    background-color: #f7f6f3;
+    border-radius: 15px;
+    color: #000000;
+  }
+
+  .menu-link,
+  .hide-link{
+    display: block;
     color: white;
-    font-weight: 400;
+    font-family: "Roboto";
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 7px 14px;
+    border-radius: 15px;
+    text-decoration: underline rgba(255,255,255,0.3);
   }
 
-  .menu-item > a{
+  .first {
+    border-bottom: 1px solid #d1d0ce;
+  }
+
+  .hide-link {
+    color: black;
     text-decoration: none;
-  	border-bottom: 1px solid rgba(255,255,255,0.3);
   }
 
-  .menu-item > a:hover {
+
+  .menu-link:hover {
   	background: #f7f6f3;
-  	border-radius: 20px;
-  	color: #333;
-  	font-weight: 700;
-  	padding: 5px 14px 6px 14px;
-  	margin-left: -14px;
-  	margin-right: -13px;
   }
 
-  .menu-item > a:active {
-  	box-shadow: 0px 2px 1px 0px rgba(105, 105, 105, 1) inset;
+  .menu-link:active {
   }
 
-  .menu-item .active {
+  /*.menu-item--active .menu-link {
   	background-color: #d07058;
-  	padding: 5px 14px 6px 14px;
-  	border-radius: 20px;
-  	margin-right: -13px;
-  	margin-left: -14px;
-  }
+  }*/
+
 
   .menu-hide {
   	display: none;
   	position: absolute;
-  	top: 28px;
+  	top: 37px;
     left: -16px;
   	width: 143px;
   	background-color: #f8f7f4;
   	border-radius: 5px;
   	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-
   }
 
   .menu-hide ul {
@@ -142,39 +137,11 @@
     list-style: none;
   }
 
-  .menu-hide .hide-item:hover {
+  .hide-item:hover {
   	background-color: #fbded7;
   }
-
-  .menu-hide .hide-item:active {
+  .hide-item:active {
   	background-color: #f6b5a5;
-  }
-
-  .menu-hide .catalog-active,
-  .menu-hide .catalog-active:hover,
-  .menu-hide .catalog-active:active{
-  	background-color: #d07058;
-  }
-
-  .menu-hide .hide-item:first-child {
-  	padding-bottom: 8px;
-  	padding-top: 11px;
-  	border-bottom: 1px solid #d1d0ce;
-  	margin-bottom: 0;
-  }
-
-  .menu-hide .hide-item:first-child:hover,
-  .menu-hide .hide-item:first-child:active{
-  	border-radius: 5px 5px 0 0;
-  }
-
-  .menu-hide .hide-item:last-child:hover,
-  .menu-hide .hide-item:last-child:active{
-  	border-radius: 0 0 5px 5px;
-  }
-
-  .menu-hide .hide-item:last-child{
-  	margin-bottom: 0
   }
 
   .menu-hide .hide-item a {
@@ -196,11 +163,6 @@
   	display: block;
   }
 
-  .catalog:hover {
-  	height: 32px;
-  	margin-top: 13px;
-  }
-
   .catalog:hover ~ .menu-item {
   	margin-top: 13px;
   }
@@ -216,7 +178,6 @@
 
   .header-actions {
     margin-left: auto;
-  	position: relative; /*сделал, для отправной точки крепежа контактов*/
   	}
 
   .header-actions-list {
@@ -230,18 +191,94 @@
     margin-right:10px;
   }
   /*------------------------Поиск---------------------------*/
-  /*??? как убрать поле поиска в икоку?*/
-  .actions-searching {
-	  }
 
-  .actions-searching::before{
-    content: "";
-    display: block;
+  .label-serching {
+    display: none;
+  }
+
+  .header-actions-item {
+    position: relative;
+  }
+
+  .header-actions-icon {
+    position: absolute;
     width: 32px;
     height: 32px;
-    background: rgba(255,255,255,0.2) url(../img/icon-find.png) no-repeat 50% 50%;
+    background: rgba(255,255,255,0.2);
     border-radius: 50%;
+    top: -6px;
+    left: -30px;
   }
+
+  .actions-searching::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 20px;
+  height: 20px;
+  background: transparent url("../img/icon-find.png") no-repeat;
+  color: rgba(255, 255, 255, 1);
+  }
+
+  .header-actions-icon:hover {
+    background: #ffffff;
+  }
+
+  .actions-searching:hover::before {
+    background: transparent url("../img/icon-find-hover.png") no-repeat;
+  }
+
+  .search-form {
+	display: none;
+	position: absolute;
+	top: 45px;
+	right: 0;
+	width: 340px;
+	box-sizing: border-box;
+	padding: 20px 15px;
+	border-radius: 5px;
+	background-color: #f8f7f4;
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.search-form input[type="search"] {
+	padding: 13px 15px;
+	width: 100%;
+	border: 1px solid #d3d3d2;
+	border-radius: 3px;
+	outline: none;
+}
+
+.search-form input[type="search"]:hover {
+	border: 2px solid #c7c6c5;
+	padding: 12px 14px;
+}
+
+.search-form input[type="search"]:focus {
+	outline: none;
+	border-radius: 3px;
+	border: 2px solid #8fbdec;
+	padding: 12px 14px;
+}
+
+.search-form label {
+	display: block;
+	position: absolute;
+	color: #b2b2b2;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 400;
+	top: 31px;
+  left: 30px;
+}
+
+  .search-form input[type="search"]:focus + label {
+	  top: 5px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #5b9ddf;
+}
 
   /*------------------------Логин---------------------------*/
 
@@ -259,7 +296,7 @@
   .actions-enter::before {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 16px;
   width: 20px;
   height: 19px;
@@ -267,14 +304,14 @@
   color: rgba(255, 255, 255, 1);
   }
 
-  .actions-enter::before:hover {
-    color: rgba(0, 0, 0, 1); /*??? почему не меняется и закрашивается?*/
+  .actions-enter:hover {
+    background: #ffffff;
+    color: #000000;
+  }
+  .actions-enter:hover::before {
+    background: transparent url("../img/icon-enter-hover.png") no-repeat;
   }
 
-  .actions-enter:hover {
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(0, 0, 0, 1);
-  }
   /*------------------------скрытый блок login----------------*/
 
   .enter-wrap { /*???почему он не показывается!?!?!??!?!*/
@@ -299,7 +336,7 @@
   .enter-form input[type="password"] {
     width: 100%;
     margin-bottom: 20px;
-    padding: 13px 15px;
+    padding: 12px 15px;
     border: 1px solid #d3d3d2;
     border-radius: 3px;
     outline: none;
@@ -418,28 +455,25 @@
   background: transparent url("../img/icon-basket.png") no-repeat;
   }
 
-  .actions-basket:hover::before {
-    color: rgba(0, 0, 0, 1); /*??? почему не меняется и закрашивается?*/
-    background-image: transparent url("../img/icon-redbasket.png") no-repeat;
-  }
-
   .actions-basket:hover {
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(0, 0, 0, 1);
+    background: #ffffff;
+    color: #000000;
+  }
+  .actions-basket:hover::before {
+    background: transparent url("../img/icon-basket-hover.png") no-repeat;
   }
 
 /*------------------------Адрес---------------------------*/
 
   .header-contacts {
-    position: absolute;
-    top:auto;
-    right: 0px;
-    width: 165px; /*??? почему текст не вмещается, по макету всё ровно,*/
-    color: rgba(255, 255, 255, 1);
+    margin-left: auto;
+    text-align: right;
+    color: #ffffff;
   }
   .header-contacts a {
+    display: block;
     text-decoration: none;
-    color: rgba(255, 255, 255, 1);
+    color: #ffffff;
   }
 
   /*------------------------Слайдер---------------------------*/
@@ -448,7 +482,7 @@
   	display: none;
   }
 
-  .site-wrapper {
+  .wrapper {
   	min-width: 940px;
   	min-height: 950px; /*для демо*/
   	background-color: #849d8f;
@@ -460,33 +494,21 @@
   							background-color: 0.5s ease;*/
   }
 
-  .site-wrapper::before,
-  .site-wrapper::after {
+  .wrapper::before,
+  .wrapper::after {
   	content "";
   	visibility: hidden;
   }/*псевдоэлементы нужны для предзагрузки картинок 2 и 3 слайдера,
    что бы они были в кэше*/
 
-  .site-wrapper::before,
-  .site-wrapper::after {
+  .wrapper::before,
+  .wrapper::after {
   	background-image: url("../img/sliderblue.png");
   }
 
-  .site-wrapper::before,
-  .site-wrapper::after {
+  .wrapper::before,
+  .wrapper::after {
   	background-image: url("../img/sliderred.png");
-  }
-
-  .content-wrapper {
-  	width: 900px;
-  	margin: 0 auto;
-  	padding: 0 20px;
-  }
-
-  .main-header {
-  	height: 100px; /*для демо*/
-  	background-color: rgba(0, 0, 0, 0.4); /*для демо*/
-  	box-shadow: inset 0 0 0 4px #000000;  /*для демо*/
   }
 
   .slider {
@@ -517,7 +539,7 @@
   	line-height: 41px;
   	vertical-align: top;
   	color: #ffffff;
-  	text-decoration: none; /*???*/
+  	text-decoration: none;
   	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 
   	background: #f26843;
@@ -536,10 +558,8 @@
   }
 
   .slide-btn:active {
-  	background:  -moz-linear-gradient(top, #d84732 0%, #e1613e 100%);
-  	background:  -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
-  	background:  linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  	box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+    background-image: linear-gradient(to bottom, #e74a35, #f26843);
+    box-shadow: inset 0px 2px 2px 0px #942718;
   }
 
   .slider-controls {
@@ -564,32 +584,35 @@
   	cursor: pointer; /*изменение курсора при наведении*/
   }
 
-  #btn-1:checked ~ .site-wrapper #slide1, /*если нажимаем radio-btn-1, то внутри
+  #btn-1:checked ~ .wrapper #slide1, /*если нажимаем radio-btn-1, то внутри
   .site-wrapper элемент с индификатором #slide1 становится display: block*/
-  #btn-2:checked ~ .site-wrapper #slide2,
-  #btn-3:checked ~ .site-wrapper #slide3 {
+  #btn-2:checked ~ .wrapper #slide2,
+  #btn-3:checked ~ .wrapper #slide3 {
   	display: block;
   }
 
-  #btn-1:checked ~ .site-wrapper {
+  #btn-1:checked ~ .wrapper {
   	background-color: #849d8f;
   	background-image: url("../img/slider-green.png");
+    background-repeat: no-repeat;
   }
 
-  #btn-2:checked ~ .site-wrapper {
+  #btn-2:checked ~ .wrapper {
   	background-color: #8996a6;
   	background-image: url("../img/slider-blue.png");
+    background-repeat: no-repeat;
   }
 
-  #btn-3:checked ~ .site-wrapper {
+  #btn-3:checked ~ .wrapper {
   	background-color: #9d8b84;
   	background-image: url("../img/slider-red.png");
+    background-repeat: no-repeat;
   }
 
-  #btn-1:checked ~ .site-wrapper label[for="btn-1"], /*если нажимаем radio-btn-1, то внутри
+  #btn-1:checked ~ .wrapper label[for="btn-1"], /*если нажимаем radio-btn-1, то внутри
   .site-wrapper label для кнопки такой-то заливается #ffffff цветом*/
-  #btn-2:checked ~ .site-wrapper label[for="btn-2"],
-  #btn-3:checked ~ .site-wrapper label[for="btn-3"] {
+  #btn-2:checked ~ .wrapper label[for="btn-2"],
+  #btn-3:checked ~ .wrapper label[for="btn-3"] {
   	background-color: #ffffff;
   }
 
@@ -658,6 +681,15 @@
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     }
 
+  .features-button:hover {
+    box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 1);
+    background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
+  }
+
+  .features-button:active {
+    box-shadow: 0px 2px 2px 0px rgba(148, 39, 24, 1) inset;
+  background-image: linear-gradient(to bottom, #e74a35, #f26843);
+  }
   /*------------------------4 карточки хита---------------------------*/
 
   .goods {
@@ -726,19 +758,55 @@
     margin-top: 0px;
   }
 
+  .goods-item-btn {
+    display: inline-block;
+    visibility: hidden;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, #f26843, #e74a35);
+    box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
+    border-radius: 16px;
+    padding: 10px 16px;
+    text-align: center;
+  }
+
+  .goods-item:hover .goods-item-btn {
+  	visibility: visible;
+  }
+
+  .goods-item:hover {
+  	background-color: rgba(255,255,255,0.2);
+  	z-index: 100;
+  }
+
+  .goods-item-btn:hover {
+    box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 1);
+    background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
+  }
+
+  .goods-item-btn:active {
+    box-shadow: 0px 2px 2px 0px rgba(148, 39, 24, 1) inset;
+    background-image: linear-gradient(to bottom, #e74a35, #f26843);
+  }
   /*------------------------О компании---------------------------*/
 
   .about {
     box-sizing: border-box;
     margin-bottom: 40px;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .about-background {
     background-color: #eadcbe;
+    border-radius: 15px;
     background: url("../img/waffel.jpg") repeat;
     padding: 24px 20px;
-    color: rgba(0, 0, 0, 1);
-
-
-    }
-
+  }
 
   .about-head {
     font-size: 24px;
@@ -760,7 +828,7 @@
     box-sizing: border-box;
     padding-left: 56px;
     width: 560px;
-    min-height: 90px; /*исправить на padding и margin*/
+    margin-bottom: -30px;
   }
 
   .about-list-item:nth-child(1)::before {
@@ -865,56 +933,93 @@
   }
 
 	.conversation-mail {
+    box-sizing: border-box;
     width: 560px;
     background: #f8f7f4;
     background-image: url("../img/pattern-mail.png");
     border-radius: 10px;
-    min-height: 220px;
+    padding: 6px;
   }
-  .wrapper-mail {
-    width: 548px;
+  .conversation-mail-inner {
     background: #f8f7f4;
-    padding: 28px 20px;
     font-size: 16px;
     line-height: 22px;
     color: #5a5a5a;
-    box-sizing: border-box;
-    margin: 0 auto;
-    vertical-align: middle;
-    border-radius: 11px;
-    min-height: 208px;
-    margin-top: 6px;
+    padding-bottom: 38px;
+    border-radius: 10px;
   }
 
-  .wrapper-p {
+  .conversation-text {
     margin: 0;
     padding: 0;
+    padding: 30px 20px 0;
+    margin-bottom: 40px;
   }
 
   p {
     margin-bottom: 35px;
   }
 
-  .conversation-form-group-one
-  input[type="text"]{
-    width: 338px;
-    border: 1px solid #b2b2b2;
-    border-radius: 10px;
-    padding: 13px;
+  .conversation-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+
+  }
+
+  .conversation-form-group-one /*почему не вмещается?*/ {
+    box-sizing: border-box;
+    width: 368px;
     margin-right: 10px;
   }
 
-  .conversation-form-group-two {
-    display: inline-block;
-  	padding: 12px 50px;
+    .conversation-form-group-one input {
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: 1px solid #b2b2b2;
+    border-radius: 5px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0 14px;
+    height: 44px;
+    font-family: "Roboto";
     font-weight: 400;
-  	font-size: 18px;
-  	line-height: 24px;
-  	text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    border-radius: 100px;
-    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    font-size: 16px;
+    line-height: 44px;
+  }
 
+  .conversation-form-group-two {
+    align-self: baseline;
+  }
+  .conversation-btn {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    font font-family: "Roboto";
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, #f26843, #e74a35);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    border-radius: 50px;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    outline: 0;
+  }
+
+  .conversation-btn:hover {
+    box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 1);
+    background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
+  }
+
+  .conversation-btn:active {
+    box-shadow: 0px 2px 2px 0px rgba(148, 39, 24, 1) inset;
+    background-image: linear-gradient(to bottom, #e74a35, #f26843);
   }
 
   /*------------------------Карта---------------------------*/
@@ -964,12 +1069,14 @@
     display: block;
   }
 
-  .contacts-info a {
+  .contacts-info-tell {
     display: block;
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
     padding-right: 40px;
+    text-decoration: none;
+    color: #000000;
   }
 
   .contacts-info-work {
@@ -991,6 +1098,17 @@
     border-radius: 100px;
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   }
+
+  .contacs-btn:hover {
+    box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 1);
+    background-image: linear-gradient(to bottom, #f58669, #ec6f5e);
+  }
+
+  .contacs-btn:active {
+    box-shadow: 0px 2px 2px 0px rgba(148, 39, 24, 1) inset;
+    background-image: linear-gradient(to bottom, #e74a35, #f26843);
+  }
+
 
 
 	/*----------------------------Паодвал----------------------------------------*/
@@ -1093,7 +1211,7 @@
   height: 13px;
   display: block;
   z-index: 100;
-  top: 3px;
+  top: 5px;
   left: -22px;
   }
 
@@ -1118,154 +1236,38 @@
     color: white;
   }
 
-/*------------------Форма обратной связи-----------------------------*/
+/*------------------Форма--------------------------------------*/
 
-  .modal-contact-us {
-    position: fixed;
-    display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 477px;
-    padding: 20px 25px 25px 24px;
-    background-color: #f8f7f4;
-    border-radius: 5px;
-    color: #323232;
-    z-index: 200;
-  }
+.contact-us {
+	position: fixed;
+	display: none;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 477px;
+	padding: 20px 25px 25px 24px;
+	background-color: #f8f7f4;
+	border-radius: 5px;
+	color: #323232;
+	z-index: 200;
+}
 
-  .modal-contacts-show,
-  .modal-overlay-show {
-    display: block;
-  }
-
-  .modal-contacts-show {
-    animation: bounce 0.3s;
-  }
-
-  .modal-close-btn {
-    position: absolute;
-    display: block;
-    width: 18px;
-    height: 17px;
-    background: url(../img/cross.png) no-repeat 50% 50%;
-    right: 20px;
-    top: 25px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-  }
-
-  .modal-contact-us .send-btn {
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    background-image: linear-gradient(to bottom, #f26843, #e74a35);
-    box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
-    border-radius: 50px;
-    padding: 12px 23px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    float: right;
-  }
-
-  .modal-contact-us p {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 500;
-    margin-bottom: 23px;
-  }
-
-  .modal-contact-us input[type="text"] {
-    width: 267px;
-    box-sizing: border-box;
-    border: 1px solid #d3d3d2;
-    padding: 11px 14px;
-    border-radius: 3px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #323232;
-    margin-bottom: 20px;
-    font-family: "Roboto", "Arial", sans-serif;
-    z-index:5;
-  }
-
-  .modal-contact-us label {
-    position: absolute;
-    display: block;
-    cursor:text;
-    left: 14px;
-    color: #999;
-    z-index:3;
-  }
-
-  .modal-contact-us input[type="text"]:focus + label,
-  .modal-contact-us textarea:focus + label {
-    transform: translatey(-30px);
-    font-size: 11px;
-    line-height: 13px;
-    color: #5b9ddf;
-  }
-
-  .modal-contact-us input[type="text"]:focus,
-  .modal-contact-us textarea:focus {
-    outline: none;
-    border-radius: 3px;
-    border: 2px solid #8fbdec;
-    padding: 10px 13px;
-  }
-
-  .modal-contact-us label[for="your-name"] {
-    top: 85px;
-    left: 39px;
-  }
-
-  .modal-contact-us label[for="your-email"] {
-    top: 154px;
-    left: 39px;
-  }
-
-  .modal-contact-us label[for="mail-body"] {
-    top: 222px;
-    left: 39px;
-  }
-
-
-  .modal-contact-us textarea {
-    display: block;
-    width: 100%;
-    height: 155px;
-    box-sizing: border-box;
-    border: 1px solid #d3d3d2;
-    padding: 11px 14px;
-    border-radius: 3px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #323232;
-    margin-bottom: 25px;
-  }
-
-  .modal-contact-us input:hover,
-  .modal-contact-us textarea:hover {
-    border: 2px solid #c7c6c5;
-    padding: 10px 13px;
-  }
-
-
+.close-btn {
+	position: absolute;
+	display: block;
+	width: 18px;
+	height: 17px;
+	background: url(../img/cross.png) no-repeat 50% 50%;
+	right: 20px;
+	top: 25px;
+	cursor: pointer;
+	outline: none;
+	border: none;
 
 
 /*------------------------------------------------------------*/
 
 																							/*Фильтры*/
-
-.filters {}
-
 .filters-list {
 	display: flex;
 	flex-direction: row;
@@ -1346,12 +1348,8 @@
 	height: 37px;
 	margin-left: 15px;
 }
-/*----------------------------12 больших карточек*/
+/*----------------------------Pagination---------------------------*/
 
-.signature {
-	position: absolute;
-	bottom: -30px;
-} /* я сделаль подпись тоже div'ом. и спозиционировал его.*/
 
 .pagination {} /* думаю тут надо сделать div, прикрепить его в низ main и
 	задать ему relative. А пагинацию в него обернуть. и привязать в нижний
@@ -1360,6 +1358,8 @@
   /*------------------------breadcrumbs---------------------------*/
 
 
+
+/*-----------------------------------------------------------------*/
   .breadcrumbs {
     margin: 0;
     padding: 0;

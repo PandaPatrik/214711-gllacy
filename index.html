@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
+    <input type="radio" id="btn-3" name="toggle">
 
     <!--Шапка сайта-->
     <div class="wrapper">
@@ -19,20 +22,20 @@
             </div>
             <!--Навигация-->
             <ul class="main-menu">
-              <li class="menu-item catalog">
-                <a href="#">Каталог</a>
+              <li class="menu-item menu-item--catalog">
+                <a href="#" class="menu-link">Каталог</a>
                 <div class="menu-hide">
 									<ul>
-										<li class="hide-item"><a href="#">Новинки</a></li>
-										<li class="hide-item"><a href="catalog.html">Сливочное</a></li>
-										<li class="hide-item"><a href="#">Щербеты</a></li>
-										<li class="hide-item"><a href="#">Фруктовый лед</a></li>
-										<li class="hide-item"><a href="#">Мелорин</a></li>
+										<li class="hide-item first"><a class="hide-link">Новинки</a></li>
+										<li class="hide-item"><a href="catalog.html" class="hide-link">Сливочное</a></li>
+										<li class="hide-item"><a href="#" class="hide-link">Щербеты</a></li>
+										<li class="hide-item"><a href="#" class="hide-link">Фруктовый лед</a></li>
+										<li class="hide-item"><a href="#" class="hide-link">Мелорин</a></li>
 									</ul>
 								</div>
               </li>
-              <li class="menu-item"><a href="#">Доставка и оплата</a></li>
-              <li class="menu-item"><a href="#">О компании</a></li>
+              <li class="menu-item menu-item--active"><a href="#" class="menu-link">Доставка и оплата</a></li>
+              <li class="menu-item"><a href="#" class="menu-link">О компании</a></li>
             </ul>
             <!--Кнопки-->
             <div class="header-actions">
@@ -40,10 +43,14 @@
 
                 <li class="header-actions-item">
                   <span class="header-actions-icon actions-searching"></span> <!-- Иконка -->
-                  <form action="#" method="post">
-                    <label for="serching">Поиск..</label>
-                    <input type="text" name="serching" id="serching">
-                  </form>
+                    <label for="serching"></label>
+                    <input class="label-serching" type="text" name="serching" id="serching">
+                  <div class="search-form"> <!-- скрытое поле поиска-->
+                    <form action="#" method="post">
+                    <input type="search" name="search" id="search">
+                    <label for="search">Что ищем?</label>
+                    </form>
+                  </div>
                 </li>
 
                 <li class="header-actions-item">
@@ -84,45 +91,35 @@
       </header>
       <!--Тело страницы-->
       <main class="page-content">
-        <!-- Слайдер-->
-        <!-- <section class="slider">
-          <div class="container">
-            <div class="slider-list">
-              <div class="slider-item">
-                <div class="slider-image">
-                  <img src="img/slider-green.png" weight="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
-                </div>
-                <div class="slider-promo">
-                  <h1>Крем-брюле и пломбир<br>с малиновым джемом</h1>
-                  <a href="#">Давайте оба!</a>
-                </div>
-              </div>
-              <div class="slider-item">
-                <div class="slider-image">
-                  <img src="img/slider-blue.png" weight="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
-                </div>
-                <div class="slider-promo">
-                  <h1>Шоколадный пломбир<br>и лимонный сорбет</h1>
-                  <a href="#">Давайте оба!</a>
-                </div>
-              </div>
-              <div class="slider-item">
-                <div class="slider-image">
-                  <img src="img/slider-red.png" weight="1089" height="854" alt="Пломбир с помадкой и клубничный щербет">
-                </div>
-                <div class="slider-promo">
-                  <h1>Пломбир с помадкой<br>и клубничный щербет</h1>
-                  <a href="#">Давайте оба!</a>
-                </div>
-              </div>
+        <div class="container">
+          <!--Слайдер-->
+          <div class="slider">
+            <!--1 стр.-->
+            <div class="slide" id="slide1">
+              <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+                <a class="slide-btn" href="#">Давайте оба!
+                </a>
             </div>
-            <ul class="slider-dots">
-              <li class="slider-dots-item">пункт 1</li>
-              <li class="slider-dots-item">пункт 2</li>
-              <li class="slider-dots-item">пункт 3</li>
-            </ul>
+            <!--2 стр.-->
+            <div class="slide" id="slide2">
+              <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+                <a class="slide-btn" href="#">Давайте оба!
+                </a>
+            </div>
+            <!--3 стр.-->
+            <div class="slide" id="slide3">
+              <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+                <a class="slide-btn" href="#">Давайте оба!
+                </a>
+            </div>
+            <!--Кнопки слайдера-->
+            <div class="slider-controls">
+              <label for="btn-1">пункт 1</label>
+              <label for="btn-2">пункт 2</label>
+              <label for="btn-3">пункт 3</label>
+            </div>
           </div>
-        </section> -->
+        </div>
 
         <!--2 большие карточки-->
         <section class="features">
@@ -164,7 +161,7 @@
                   <a class="goods-item-link" href="#">
                     <h3 class="goods-item-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                   </a>
-                <!-- </div> -->
+                  <a class="goods-item-btn" href="#">Быстрый просмотр</a>
               </article>
 
               <article class="goods-item">
@@ -181,7 +178,7 @@
                  <a class="goods-item-link" href="#">
                    <h3 class="goods-item-name">Сливочно-кофейное с кусочками шоколада</h3>
                  </a>
-                 <!-- <a class="goods-item-btn" href="#">Быстрый просмотр<a>-->
+                 <a class="goods-item-btn" href="#">Быстрый просмотр</a>
                </article>
 
               <article class="goods-item">
@@ -198,6 +195,7 @@
                 <a class="goods-item-link" href="#">
                   <h3 class="goods-item-name">Сливочно-клубничное с присыпкой из белого шоколада</h3>
                 </a>
+                <a class="goods-item-btn" href="#">Быстрый просмотр</a>
               </article>
 
               <article class="goods-item">
@@ -214,6 +212,7 @@
                   <a class="goods-item-link" href="#">
                     <h3 class="goods-item-name">Сливочное крем-брюле с карамельной подливкой</h3>
                   </a>
+                  <a class="goods-item-btn" href="#">Быстрый просмотр</a>
               </article>
             </div>
           </div>
@@ -222,32 +221,34 @@
         <!--О компании-->
         <section class="about">
           <div class="container">
-            <h3 class="about-head">Магазин Глэйси - это онлайн и офлайн магазин по продаже пороженного производства на развес</h3>
+            <div class="about-background">
+              <h3 class="about-head">Магазин Глэйси - это онлайн и офлайн магазин по продаже пороженного производства на развес</h3>
 
-            <section class="about-list">
-             <div class="about-list-item">
-               <p>Все наше мороженное изготавливается на собственном
-               производстве, с использованием современного оборудования
-               и проверенных временем технологий.</p>
-             </div>
-             <div class="about-list-item">
-               <p>Для приготовления мороженноо используются настоящие
-               сливки и молоко высочайшего качества. Все дополнительные
-               ингридиенты и добавки произведены из натуральнного,
-               экологически чистого сырья.</p>
-             </div>
-             <div class="about-list-item">
-               <p>Закупка ингридиентов производится только у проверенных
-               фермерских хозяйств и компаний, с которыми нас связывает
-               долговременное сотрудничество.</p>
-             </div>
-             <div class="about-list-item">
-               <p>Доставка нашего мороженного до заказчиков осуществляется
-               в специальном термопаке, который не дает мороженному
-               растаять в пути и позволяет ему сохранить свой превосходный
-               вкус.</p>
-             </div>
-            </section>
+              <section class="about-list">
+               <div class="about-list-item">
+                 <p>Все наше мороженное изготавливается на собственном
+                 производстве, с использованием современного оборудования
+                 и проверенных временем технологий.</p>
+               </div>
+               <div class="about-list-item">
+                 <p>Закупка ингридиентов производится только у проверенных
+                   фермерских хозяйств и компаний, с которыми нас связывает
+                   долговременное сотрудничество.</p>
+                 </div>
+               <div class="about-list-item">
+                 <p>Для приготовления мороженноо используются настоящие
+                 сливки и молоко высочайшего качества. Все дополнительные
+                 ингридиенты и добавки произведены из натуральнного,
+                 экологически чистого сырья.</p>
+               </div>
+               <div class="about-list-item">
+                 <p>Доставка нашего мороженного до заказчиков осуществляется
+                 в специальном термопаке, который не дает мороженному
+                 растаять в пути и позволяет ему сохранить свой превосходный
+                 вкус.</p>
+               </div>
+              </section>
+            </div>
           </div>
         </section>
 
@@ -263,8 +264,8 @@
               </div>
 
               <div class="conversation-mail">
-                <div class="wrapper-mail">
-                  <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
+                <div class="conversation-mail-inner">
+                  <p class="conversation-text">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
                     всего самого вкусного, что у нас происходит. Обещаем не спамить
                     и не слать всякой не нужной ерунды. Честно =)</p>
                   <form class="conversation-form" action="#" method="post">
@@ -272,7 +273,7 @@
                       <input type="text" name="mail" placeholder="Электронная почта" id="mail">
                     </div>
                     <div class="conversation-form-group-two">
-                      <input type="button" value="Отправить">
+                      <input  class="conversation-btn" type="button" value="Отправить">
                     </div>
                   </form>
                 </div>
@@ -291,7 +292,7 @@
             </div>
             <div class="contacts-info">
               <span class="contacts-info-order">Для заказов по телефону</span>
-              <a href="tel:88124502525">8 812 450-25-25</a>
+              <a class="contacts-info-tell" href="tel:88124502525">8 812 450-25-25</a>
               <span class="contacts-info-work">(с 10 до 20 ежедневно)</span>
             </div>
             <a href="#" class="contacs-btn">Форма обратной связи</a>
@@ -326,9 +327,9 @@
     </footer>
     </div>
 
-    <div class="modal-contact-us">
+    <div class="contact-us">
 			<p>Мы обязательно вам ответим!</p>
-			<button class="modal-close-btn" type="button" title="Закрыть"></button>
+			<button class="close-btn" type="button" title="Закрыть"></button>
 			<form method="post" action="https://htmlacademy.ru">
 				<input type="text" name="your-name" id="your-name">
 				<label for="your-name">Как вас зовут?</label>
