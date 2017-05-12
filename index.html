@@ -42,9 +42,7 @@
               <ul class="header-actions-list">
 
                 <li class="header-actions-item">
-                  <span class="header-actions-icon actions-searching"></span> <!-- Иконка -->
-                    <label for="serching"></label>
-                    <input class="label-serching" type="text" name="serching" id="serching">
+                  <span class="header-actions-icon header-actions-icon--searching">search</span> <!-- Иконка -->
                   <div class="search-form"> <!-- скрытое поле поиска-->
                     <form action="#" method="post">
                       <input type="search" name="search" id="search">
@@ -54,8 +52,7 @@
                 </li>
 
                 <li class="header-actions-item">
-                  <span class="header-actions-enter"></span>
-                  <a href="#" class="header-actions-link actions-enter">Вход</a>
+                  <a href="#" class="header-actions-link header-actions-link--enter">Вход</a>
                   <div class="enter-wrap">
   									<form class="enter-form" method="post">
   										<input type="text" name="name" id="name">
@@ -63,7 +60,7 @@
   										<input type="password" name="pass" id="pass">
   										<label for="pass">Пароль</label>
   										<div class="register-block">
-  											<input type="submit" name="enter-btn" id="enter-btn" value="Войти">
+  											<input class="register-btn" type="submit" name="enter-btn" id="enter-btn" value="Войти">
   											<div class="right-block">
   												<a href="#">Забыли пароль?</a>
   												<a href="#">Новая регистрация</a>
@@ -74,8 +71,7 @@
                 </li>
 
                 <li class="header-actions-item">
-                  <span class="header-actions-basket"></span>
-                  <a href="#" class="header-actions-link actions-basket">Корзина</a>
+                  <a href="#" class="header-actions-link header-actions-link--basket">Корзина</a>
                 </li>
 
               </ul>
@@ -144,8 +140,8 @@
         <section class="goods">
           <div class="container">
             <div class="goods-list">
-              <article class="goods-item">
-                <div class="googs-image">
+              <article class="goods-item left">
+                <div class="goods-image left">
                   <img src="img/ice-orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                 </div>
                 <div class="goods-price">
@@ -195,7 +191,7 @@
                 <a class="goods-item-btn" href="#">Быстрый просмотр</a>
               </article>
 
-              <article class="goods-item">
+              <article class="goods-item right">
                 <div class="googs-image">
                   <img src="img/ice-caramel.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                 </div>
@@ -309,7 +305,7 @@
           </ul>
 
           <ul class="footer-links">
-            <li><a class="links-item-first" href="#">Для поставщиков</a></li>
+            <li><a class="links-item heart" href="#">Для поставщиков</a></li>
             <li><a class="links-item" href="#">О производстве</a></li>
             <li><a class="links-item" href="#">Наши документы</a></li>
             <li><a class="links-item" href="#">Экологические стандарты</a></li>
@@ -324,17 +320,17 @@
     </footer>
     </div>
 
-    <div class="contact-us">
-			<p>Мы обязательно вам ответим!</p>
+    <div class="contact-us contacts-show">
+			<p class="contact-head">Мы обязательно вам ответим!</p>
 			<button class="close-btn" type="button" title="Закрыть"></button>
-			<form method="post" action="https://htmlacademy.ru">
-				<input type="text" name="your-name" id="your-name">
-				<label for="your-name">Как вас зовут?</label>
-				<input type="text" name="your-email" id="your-email">
-				<label for="your-email">Ваш почта для ответа?</label>
-				<textarea name="mail-body" id="mail-body"></textarea>
-				<label for="mail-body">Напишите что-нибудь...</label>
-				<input type="submit" class="send-btn" value="Отправить">
+			<form class="contact-form" method="post" action="#">
+				<input class="contact-name-field" type="text" name="your-name" id="your-name">
+				<label class="contact-name" for="your-name">Как вас зовут?</label>
+				<input class="contact-mail-field" type="text" name="your-email" id="your-email">
+				<label class="contact-mail" for="your-email">Ваш почта для ответа?</label>
+				<textarea class="contact-message-field" name="mail-body" id="mail-body"></textarea>
+				<label class="contact-message" for="mail-body">Напишите что-нибудь...</label>
+				<input class="send-btn" type="submit" value="Отправить">
 			</form>
 		</div>
 

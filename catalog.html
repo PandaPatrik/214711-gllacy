@@ -20,7 +20,7 @@
             <!--Навигация-->
             <ul class="main-menu">
               <li class="menu-item menu-item--catalog">
-                <a href="#" class="menu-link">Каталог</a>
+                <a href="#" class="menu-link catalog-hover">Каталог</a>
                 <div class="menu-hide">
 									<ul>
 										<li class="hide-item first"><a class="hide-link">Новинки</a></li>
@@ -39,20 +39,17 @@
               <ul class="header-actions-list">
 
                 <li class="header-actions-item">
-                  <span class="header-actions-icon actions-searching"></span>
-                    <label for="serching"></label>
-                    <input class="label-serching" type="text" name="serching" id="serching">
+                  <span class="header-actions-icon header-actions-icon--searching">search</span> <!-- Иконка -->
                   <div class="search-form"> <!-- скрытое поле поиска-->
                     <form action="#" method="post">
-                    <input type="search" name="search" id="search">
-                    <label for="search">Что ищем?</label>
+                      <input type="search" name="search" id="search">
+                      <label for="search">Что ищем?</label>
                     </form>
                   </div>
                 </li>
 
                 <li class="header-actions-item">
-                  <span class="header-actions-enter"></span>
-                  <a href="#" class="header-actions-link actions-enter">Вход</a>
+                  <a href="#" class="header-actions-link header-actions-link--enter">Вход</a>
                   <div class="enter-wrap">
   									<form class="enter-form" method="post">
   										<input type="text" name="name" id="name">
@@ -60,7 +57,7 @@
   										<input type="password" name="pass" id="pass">
   										<label for="pass">Пароль</label>
   										<div class="register-block">
-  											<input type="submit" name="enter-btn" id="enter-btn" value="Войти">
+  											<input class="register-btn" type="submit" name="enter-btn" id="enter-btn" value="Войти">
   											<div class="right-block">
   												<a href="#">Забыли пароль?</a>
   												<a href="#">Новая регистрация</a>
@@ -71,8 +68,7 @@
                 </li>
 
                 <li class="header-actions-item">
-                  <span class="header-actions-basket "></span> <!-- Иконка -->
-                  <a href="#" class="header-actions-link actions-basket">Корзина</a>
+                  <a href="#" class="header-actions-link header-actions-link--basket hover-basket">2 товара</a>
                   <div class="cart-wrap">
   									<div class="cart-item">
   										<button class="delete-item-first" title="Удалить"></button>
@@ -397,14 +393,15 @@
 
           <!--Страницы-->
           <div class="pagination">
-            <a class="prev-page">&lt;</a>
-            <a class="pagination-link selected">1</a>
-            <a class="pagination-link">2</a>
-            <a class="pagination-link">3</a>
-            <a class="pagination-link">4</a>
-            <a class="pagination-link">5</a>
-            <a class="next-page">&gt;</a>
+            <a class="pagination-link prev-page">&lt;</a>
+            <a class="pagination-link pagination-before selected">1</a>
+            <a class="pagination-link pagination-before">2</a>
+            <a class="pagination-link pagination-before">3</a>
+            <a class="pagination-link pagination-before">4</a>
+            <a class="pagination-link pagination-before">5</a>
+            <a class="pagination-link next-page">&gt;</a>
           </div>
+
         </div>
       </main>
 
