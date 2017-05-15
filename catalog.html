@@ -90,8 +90,8 @@
                 </li>
               </ul>
               <div class="header-contacts">
-                <span>С 10 до 20, ежедневно</span>
-                <a href="#">8 812 450-25-25</a>
+                <div class="header-contacts-daily">С 10 до 20, ежедневно</div>
+                <div class="header-contacts-tel"><a href="#">8 812 450-25-25</a></div>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
             <form class="filter-form" action="index.html" method="post">
               <div class="filter-position">
                 <div class="sorting">
-                  <p class="caption">Сортировка:</p>
+                  <p class="caption-sort">Сортировка:</p>
                   <div class="select">
                     <select class="select-list">
                       <option class="select-item">по популярности</option>
@@ -123,10 +123,10 @@
                   </div>
                 </div>
                 <div class="price">
-                  <div class="price-number caption">
+                  <div class="price-number caption-price">
                     <span>Цена:</span>
                     <input type="text" name="price-min" id="price-min" value="100">
-                    <span>руб. - </span>
+                    <span>руб.&#8212;</span>
                     <input type="text" name="price-max" id="price-max" value="500">
                     <span>руб.</span>
                   </div>
@@ -137,8 +137,8 @@
                   </div>
                 </div>
                 <div class="fat">
-                  <p class="caption">Жирность:</p>
-                  <fieldset class="fieldset">
+                  <p class="caption-fat">Жирность:</p>
+                  <fieldset class="fieldset-fat">
                     <input type="radio" name="fat-toggle" id="fat-0">
                     <label class="label-text" for="fat-0">0%</label>
                     <input type="radio" name="fat-toggle" id="fat-10" checked="">
@@ -150,18 +150,18 @@
                   </fieldset>
                 </div>
                 <div class="extender">
-                  <p class="caption">Наполнители:</p>
-                  <fieldset class="fieldset">
+                  <p class="caption-inner">Наполнители:</p>
+                  <fieldset class="fieldset-inner">
                     <input type="checkbox" name="chocolate" id="chocolate" checked="">
-                    <label class="label-text" for="chocolate">шоколадные</label>
+                    <label class="label-text label-ch" for="chocolate">шоколадные</label>
                     <input type="checkbox" name="sugar" id="sugar" checked="">
-                    <label class="label-text" for="sugar">сахарные присыпки</label>
+                    <label class="label-text label-su" for="sugar">сахарные присыпки</label>
                     <input type="checkbox" name="fruits" id="fruits">
-                    <label class="label-text" for="fruits">фрукты</label>
+                    <label class="label-text label-fr" for="fruits">фрукты</label>
                     <input type="checkbox" name="syrup" id="syrup">
-                    <label class="label-text" for="syrup">сиропы</label>
+                    <label class="label-text label-sy" for="syrup">сиропы</label>
                     <input type="checkbox" name="jam" id="jam">
-                    <label class="label-text" for="jam">джемы</label>
+                    <label class="label-text label-ja" for="jam">джемы</label>
                   </fieldset>
                 </div>
                 <input type="submit" value="Применить" name="show-btn" id="show-btn">
@@ -179,7 +179,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">310</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -192,9 +192,9 @@
                     <img src="img/ice-coffee.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                   </div>
                   <div class="goods-price">
-                    <div class="goods-pay">310</div>
+                    <div class="goods-pay">380</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -207,9 +207,9 @@
                     <img src="img/ice-strawberry.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                   </div>
                   <div class="goods-price">
-                    <div class="goods-pay">310</div>
+                    <div class="goods-pay">355</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -222,9 +222,9 @@
                     <img src="img/ice-caramel.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                   </div>
                   <div class="goods-price">
-                    <div class="goods-pay">310</div>
+                    <div class="goods-pay">415</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -239,7 +239,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">325</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -254,7 +254,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">410</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -269,7 +269,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">375</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -284,7 +284,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">320</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -299,7 +299,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">440</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -314,7 +314,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">435</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -329,7 +329,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">355</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -344,7 +344,7 @@
                   <div class="goods-price">
                     <div class="goods-pay">420</div>
                     <div class="goods-weight">
-                      <span>Р</span>
+                      <span>&#8381;</span>
                       <span>/кг</span>
                     </div>
                   </div>
@@ -357,13 +357,13 @@
           </section>
           <!--Страницы-->
           <div class="pagination">
-            <a class="pagination-link prev-page">&lt;</a>
+            <img class="pagination-link-left" src="img/paginator-left.png" alt="Назад" width="8" height="14"></img>
             <a class="pagination-link pagination-link--active">1</a>
             <a class="pagination-link">2</a>
             <a class="pagination-link">3</a>
             <a class="pagination-link">4</a>
             <a class="pagination-link">5</a>
-            <a class="pagination-link next-page">&gt;</a>
+            <img class="pagination-link-right" src="img/paginator-right.png" alt="Вперёд" width="8" height="14"></img>
           </div>
         </div>
       </main>
@@ -373,9 +373,9 @@
           <div class="footer-page-inner">
             <ul class="footer-social">
               <li><a class="social-link social-link-tw" href="#">Твиттер</a></li>
-              <li><a class="social-link social-link-vk" href="#">Вконтакте</a></li>
-              <li><a class="social-link social-link-fb" href="#">Фейсбук</a></li>
               <li><a class="social-link social-link-in" href="#">Инстаграм</a></li>
+              <li><a class="social-link social-link-fb" href="#">Фейсбук</a></li>
+              <li><a class="social-link social-link-vk" href="#">Вконтакте</a></li>
             </ul>
             <ul class="footer-links">
               <li><a  class="links-item" href="#">Для поставщиков</a></li>
@@ -385,7 +385,7 @@
             </ul>
             <div class="footer-copyright">
               <a href="https://htmlacademy.ru/"><img src="img/icon-html.png" alt="htmlacademy" width="108" height="38"></a>
-              <div>Сделано в <a  class="links-item" href="https://htmlacademy.ru/">HTML Academy</a> 2016</div>
+              <div>Сделано в <a class="links-item" href="https://htmlacademy.ru/">HTML Academy</a>	&#169; 2017</div>
             </div>
           </div>
         </div>

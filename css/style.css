@@ -23,10 +23,10 @@
   }
 
   body {
+    font-family: "Roboto";
 		font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    font-family: "Roboto";
 		background-color: #849d8f; /*для слайдера*/
 	}
 
@@ -50,7 +50,7 @@
   	flex-wrap: wrap;
   	justify-content: flex-start;
     align-items: flex-start;
-  	margin-bottom: 24px;
+  	margin-bottom: 13px;
   }
 
   .header-logo {
@@ -514,7 +514,7 @@
     display: block;
     content: "";
     position: absolute;
-    top: 5px;
+    top: 6px;
     left: 16px;
     width: 21px;
     height: 20px;
@@ -657,24 +657,30 @@
   .header-contacts {
     position: absolute;
     right: 0;
-    bottom: -35px;
+    bottom: -37px;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .header-contacts-daily {
     font-family: "Roboto";
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
-    margin-left: auto;
-    text-align: right;
     color: #ffffff;
+    margin-bottom: 3px;
   }
 
-  .header-contacts a {
+  .header-contacts-tel {
     font-family: "Roboto";
     font-size: 22px;
     line-height: 24px;
     font-weight: 700;
-    display: block;
-    text-decoration: none;
+  }
+
+  .header-contacts-tel a {
     color: #ffffff;
+    text-decoration: none;
   }
   /*------------------------Слайдер---------------------------*/
   .head-btn { /*прячем верхнюю панель переключателя слайдера*/
@@ -713,7 +719,7 @@
 
   .slide {
   	display: none;
-    padding-top: 286px;
+    padding-top: 297px;
     padding-bottom: 41px;
   }
 
@@ -815,7 +821,7 @@
   /*------------------------main-----------------------------------------*/
   /*------------------------2 большие карточки---------------------------*/
   .features {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
   }
 
   .features-list {
@@ -826,8 +832,8 @@
   }
 
   .features-item {
-    width: 560px;
-    height: 230px;
+    max-width: 560px;
+    height: 229px;
     display: flex;
     flex-direction: column;
   }
@@ -846,10 +852,16 @@
     font-weight: 700;
   }
 
-  /*.features-title,
-  .features-text {
+  .features-title {
     margin: 17px;
-  }*/
+  }
+
+  .features-text {
+    margin-top: -3px;
+    margin-left: 19px;
+    padding-right: 20px;
+    margin-bottom: 43px;
+  }
 
   .features-item:first-child {
     background-color: #80212d;
@@ -871,17 +883,18 @@
   }
 
   .features-button {
+    font-family: "Roboto";
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
     margin-right: 21px;
     margin-bottom: 21px;
     align-self: flex-end;
     display: inline-block;
-  	padding: 12px 50px;
-    font-weight: 400;
-  	font-size: 18px;
-  	line-height: 24px;
+    padding: 11px 21px;
   	vertical-align: top;
   	color: #ffffff;
-  	text-decoration: none; /*???*/
+  	text-decoration: none;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     border-radius: 100px;
@@ -898,9 +911,9 @@
     background-image: linear-gradient(to bottom, #e74a35, #f26843);
   }
   /*------------------------4 карточки хита---------------------------*/
-  .goods {
+  /*.goods {
     margin-bottom: 38px;
-  }
+  }*/
 
   .goods-list {
     display: flex;
@@ -912,7 +925,6 @@
   .goods-item {
     position: relative;
     padding: 6px 13px 21px 13px;
-    border-radius: 10px;
     text-align: center;
     box-sizing: border-box;
     width: 286px;
@@ -928,14 +940,14 @@
    padding-right: 0;
  }
 
-  .goods-item::before {
+  .hit::before {
     content: "";
     display: block;
     position: absolute;
     background: url("../img/hit.png") no-repeat;
     width: 61px;
     height: 61px;
-    top: 8px;
+    top: 6px;
     left: 12px;
     z-index: 100;
   }
@@ -957,16 +969,18 @@
 
   .goods-pay {
     position: absolute;
+    font-family: "Roboto";
     font-size: 45px;
     line-height: 45px;
-    bottom: 10px;
-    left:10px;
+    font-weight: 700;
+    bottom: 20px;
+    left: -6px;
   }
 
   .goods-weight {
     position: absolute;
-    bottom: 4px;
-    left: 90px;
+    bottom: 14px;
+    left: 77px;
   }
 
   .goods-valute {
@@ -993,6 +1007,10 @@
   }
 
   .goods-item-name {
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
     margin-top: 0px;
   }
 
@@ -1042,7 +1060,7 @@
     background-color: #eadcbe;
     border-radius: 15px;
     background: url("../img/waffel.jpg") repeat;
-    padding: 24px 20px;
+    padding: 3px 19px;;
   }
 
   .about-head {
@@ -1051,7 +1069,8 @@
     line-height: 30px;
     font-weight: 500;
     margin-top: 0;
-    margin-bottom: 22px;
+    margin-bottom: 6px;
+    padding-top: 21px;
   }
 
   .about-list {
@@ -1059,17 +1078,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 15px;
   }
 
   .about-list-item {
-    font-family: "Roboto";
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 400;
     position: relative;
     box-sizing: border-box;
     padding-left: 56px;
     width: 541px;
+  }
+
+  .item-description {
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 16px 3px 6px 1px;
   }
 
   .about-list-item:nth-child(1)::before {
@@ -1081,7 +1105,7 @@
     height: 49px;
     display: block;
     z-index: 100;
-    top: 0px;
+    top: 3px;
     left: 0px;
   }
 
@@ -1094,7 +1118,7 @@
     height: 49px;
     display: block;
     z-index: 100;
-    top: 0px;
+    top: 3px;
     left: 0px;
   }
 
@@ -1107,7 +1131,7 @@
     height: 49px;
     display: block;
     z-index: 100;
-    top: 0px;
+    top: 3px;
     left: 0px;
   }
 
@@ -1120,12 +1144,12 @@
     height: 49px;
     display: block;
     z-index: 100;
-    top: 0px;
+    top: 3px;
     left: 0px;
   }
   /*------------------------2 большие карточки---------------------------*/
 	.conversation{
-		margin-bottom: 40px;
+		margin-bottom: 39px;
 	}
 
 	.conversation-list {
@@ -1133,21 +1157,21 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+    height: 221px;
 	}
 
-  .conversation-blog {/*исправить на padding и margin*/
-    width: 560px; /*??? как сделать правильно картинку?*/
-    height: 230px;
+  .conversation-blog {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     background-image: url("../img/strawberry background.jpg");
-    background-position-x: -35px;
-    background-position-y: -200px;
-    background-size: 150%;
+    background-position-x: -53px;
+    background-position-y: -225px;
+    background-size: 155%;
     background-repeat: no-repeat;
     color: #000000;
-    border-radius: 10px;
+    border-radius: 15px;
+    padding-right: 235px;
   }
 
   .conversation-blog-head {
@@ -1155,20 +1179,19 @@
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    margin: 20px 20px 2px 20px;
+    margin: 23px 20px 2px 20px;
   }
 
   .conversation-blog-content {
     width: 285px;
-    margin: 0 20px;
+    margin: 2px 20px;
+  }
+
+  .conversation-blog-content a {
     font-family: "Roboto";
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
-  }
-
-  .conversation-blog-content a {
-    text-decoration: none;
     color: #000000;
   }
 
@@ -1177,8 +1200,8 @@
     width: 560px;
     background: #f8f7f4;
     background-image: url("../img/pattern-mail.png");
-    border-radius: 10px;
-    padding: 6px;
+    border-radius: 15px;
+    padding: 5px;
   }
 
   .conversation-mail-inner {
@@ -1186,7 +1209,7 @@
     font-size: 16px;
     line-height: 22px;
     color: #5a5a5a;
-    padding-bottom: 38px;
+    padding-bottom: 35px;
     border-radius: 10px;
   }
 
@@ -1196,9 +1219,8 @@
     line-height: 22px;
     font-weight: 400;
     margin: 0;
-    padding: 0;
     padding: 30px 20px 0;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .conversation-form {
@@ -1253,7 +1275,7 @@
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     border-radius: 50px;
     border: none;
-    padding: 10px 15px;
+    padding: 8px 19px;
     cursor: pointer;
     outline: 0;
   }
@@ -1274,13 +1296,26 @@
 
 	.contacts-map {
 		background-image: url("../img/map.jpg");
-		height: 430px;
-		margin-bottom: 37px;
+		height: 429px;
+		margin-bottom: 19px;
 		background-repeat: no-repeat;
 		background-position: center; /*поставить в % фоны в академии!!*/
 		background-color: #f6f0d7;
-		background-size: cover;
+		background-size: 92%;
 	}
+
+  .contacts-map::before {
+    content: "";
+    position: absolute;
+    top: 208px;
+    left: 361px;
+    width: 80px;
+    height: 140px;
+    background: url("../img/marker.png") no-repeat
+    center center;
+    transform: translate(-50%, -50%); /*узнать шо за нах*/
+    z-index: 30;
+  }
 
 	.contacts-block {
     font-family: "Roboto";
@@ -1288,7 +1323,7 @@
     line-height: 20px;
     font-weight: 400;
     position: absolute;
-    right: 27px;
+    right: 81px;
     top: 63px;
     width: 302px;
     border-radius: 10px;
@@ -1302,6 +1337,7 @@
 
   .contacts-title {
     display: block;
+    padding-right: 111px;
   }
 
   .contacts-adress {
@@ -1311,7 +1347,7 @@
     font-weight: 700;
     display: block;
     padding-right: 40px;
-    margin-bottom: 21px;
+    margin-bottom: 20px;
   }
 
   .contacts-info-order {
@@ -1325,6 +1361,8 @@
     font-weight: 700;
     display: block;
     padding-right: 40px;
+    padding-top: 4px;
+    margin-bottom: 2px;
     text-decoration: none;
     color: #000000;
   }
@@ -1335,7 +1373,11 @@
     line-height: 22px;
     font-weight: 400;
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
+  }
+
+  .contacs-btn-size {
+    padding-right: 15px;
   }
 
   .contacs-btn {
@@ -1369,11 +1411,11 @@
 	  flex-direction: row;
 	  justify-content: space-between;
 		flex-wrap: wrap;
-    margin-bottom: 24px;
-	}
+    margin-bottom: 26px;
+  }
 
 	.footer-social {
-		margin: 0;
+    position: relative;
 		padding: 0;
 		list-style-type: none;
 		display: flex;
@@ -1383,9 +1425,10 @@
 		flex-wrap: wrap;
 		width: 268px;
 		height: 50px;
+    margin: 11px 0 0 1px;
 	}
 
-	.social-link {
+  .social-link {
 		margin-right: 11px;
 		display: block;
 		text-decoration: none;
@@ -1396,7 +1439,7 @@
 		opacity: 0.8;/*узнать какого хе*/
 		font-size: 0;
 		border-radius: 50%;
-		border: 2px solid rgba(153, 153, 153, 0.5);
+		border: 2px solid rgba(255, 255, 255, 0.5);
 	}
 
 	.social-link:hover {
@@ -1441,15 +1484,16 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    align-items: baseline;
     align-content: center;
     font-size: 13px;
     line-height: 19px;
     font-weight: 400;
     margin: 0;
     padding: 0;
+    padding-top: 14px;
+    padding-right: 46px;
 	}
 
   .links-item {
@@ -1479,17 +1523,26 @@
     height: 13px;
     display: block;
     z-index: 100;
-    top: 5px;
-    left: -22px;
+    top: 17px;
+    left: -19px;
   }
 
 	.footer-links li {
-		margin-right: 33px;
     text-decoration: none;
+    margin: 2px 33px 2px 0;
 	}
 
   .footer-links a {
+    font-family: "Roboto";
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    display: block;
     color: white;
+  }
+
+  .footer-links li:first-child {
+    font-weight: 700;
   }
 
 	.footer-copyright {
@@ -1497,8 +1550,7 @@
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
-		margin-top: -19px;
-		margin-right: 0;
+		margin-right: -8px;
     color: white;
   }
 
@@ -1677,13 +1729,17 @@
     justify-content: flex-start;
     margin: 0;
     padding: 0;
-    margin-bottom: 10px;
     list-style: none;
     color: #ffffff;
   }
 
   .breadcrumbs-item {
-    margin-right: 8px;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    padding-top: 5px;
+    margin-right: 7px;
   }
 
   .breadcrumbs-link {
@@ -1693,13 +1749,23 @@
     cursor: pointer;
   }
 
-  .breadcrumbs-terget {
+  .breadcrumbs-target {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
     color: #ffffff;
     text-decoration: none;
-    margin-right: 8px;
+    padding-top: 6px;
   }
 /*----------------------------Фильтры------------------------------*/
   .filters-head {
+    font-family: "Roboto";
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+    padding: 0;
+    margin: 3px 0 0 0;
     color: #ffffff;
   }
 
@@ -1715,14 +1781,47 @@
   	margin-bottom: 36px;
   }
 
-  .caption{
+  .caption-sort {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
     margin: 0;
-  	font-size: 14px;
-  	line-height: 16px;
-  	font-weight: 500;
-  	padding-left: 18px;
-    padding-bottom: 6px;
     color: #ffffff;
+    padding: 26px 0 6px 16px;
+  }
+
+  .caption-price {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #ffffff;
+    padding: 26px 0 6px 14px;
+  }
+
+  .caption-inner {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #ffffff;
+    padding: 0 0 5px 15px;
+  }
+
+  .caption-fat {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: #ffffff;
+    margin-top: 1px;
+    margin-left: 2px;
+    padding: 27px 0 0px 14px;
+    margin-bottom: 6px;
   }
 
   .filter-position input[type="radio"],
@@ -1739,22 +1838,24 @@
   }
 
   .price span {
+    font-family: "Roboto";
     font-size: 14px;
     line-height: 16px;
-    font-weight: 500;
+    font-weight: 400;
     display: inline-block;
     margin-bottom: 3px;
   }
 
   .price input[type="text"] {
-    width: 30px;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    width: 24px;
     background: transparent;
     border: none;
     outline: none;
     color: #fff;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 500;
   }
 
   .range {
@@ -1782,8 +1883,8 @@
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
-    top: 7px;
-    left: 35px;
+    top: 8px;
+    left: 34px;
     cursor: pointer;
   }
 
@@ -1798,17 +1899,19 @@
 
   .filter-position input[type="submit"] {
     color: #fff;
+    font-family: "Roboto";
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
     background-color: rgba(255,255,255,0.2);
-    padding: 7px 28px;
+    padding: 7px 29px;
     border: 2px solid #fbfbfb;
     border-radius: 20px;
     cursor: pointer;
     outline: none;
     margin-top: 20px;
-    margin-left: 17px;
+    margin-left: 14px;
+    padding-right: 26px;
   }
 
   .filter-position input[type="submit"]:hover {
@@ -1828,14 +1931,18 @@
   }
 
   .fat label {
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
     position: relative;
-    margin-right: 45px;
+    margin-right: 46px;
     cursor: pointer;
   }
 
   .extender label {
     position: relative;
-    margin-right: 49px;
+    margin-right: 50px;
     cursor: pointer;
   }
 
@@ -1852,7 +1959,7 @@
     height: 22px;
     background: url("../img/radio-off.png") no-repeat;
     top: -2px;
-    left: -31px;
+    left: -29px;
   }
 
   .fat input[type="radio"]:checked + label:before {
@@ -1867,15 +1974,59 @@
     background: url("../img/radio-on-hover.png") no-repeat;
   }
 
-  .extender label:before {
+  .label-sy:before {
     content: "";
     display: block;
     position: absolute;
     width: 20px;
     height: 20px;
     background: url("../img/check-off.png") no-repeat;
-    top: -1px;
+    top: 0px;
     left: -32px;
+  }
+
+  .label-ja:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/check-off.png") no-repeat;
+    top: 0px;
+    left: -33px;
+  }
+
+  .label-ch:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/check-off.png") no-repeat;
+    top: 0px;
+    left: -30px;
+  }
+
+  .label-su:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/check-off.png") no-repeat;
+    top: 0px;
+    left: -32px;
+  }
+
+  .label-fr:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("../img/check-off.png") no-repeat;
+    top: 0px;
+    left: -34px;
   }
 
   .extender input[type="checkbox"]:checked + label:before {
@@ -1894,24 +2045,39 @@
     color: #ffffff;
   }
 
-  .fieldset {
+  .fieldset-fat {
+    margin: 0;
     display: inline;
-    padding: 8px 16px 8px 46px;
+    padding: 7px 16px 7px 44px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  .fieldset-inner {
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 1px;
+    display: inline;
+    padding: 9px 16px 9px 46px;
     border-radius: 50px;
     border: none;
     background-color: rgba(255,255,255,0.2);
   }
 
   .select-list {
-    border-radius: 20px;
-    background-color: rgba(255,255,255,0.2);
-    height: 36px;
-    padding: 10px;
-    padding-left: 18px;
-    border: 0;
     font-size: 16px;
     line-height: 1;
     font-weight: 500;
+    font-family: "Roboto";
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.2);
+    height: 36px;
+    padding: 10px 10px 10px 14px;
+    border: 0;
     -webkit-appearance: none;
     width: 193px;
     color: #fff;
@@ -1946,16 +2112,16 @@
     align-items: baseline;
     border-bottom: 1px solid rgba(255,255,255,0.2);
     list-style: none;
-  	margin-top: 45px;
-  	text-align: right;
-  	padding-bottom: 30px;
-    margin-bottom: 39px;
+    margin-top: 49px;
+    text-align: right;
+    padding-bottom: 26px;
+    margin-bottom: 19px;
   }
 
   .pagination-link {
     font-family: "Roboto";
     font-size: 16px;
-    line-height: 25px;
+    line-height: 18px;
     font-weight: 500;
     position: relative;
     text-decoration: none;
@@ -1964,11 +2130,19 @@
     vertical-align: middle;
     height: 25px;
     width: 25px;
-    margin-left: 3px;
+    margin-left: 4px;
     cursor: pointer;
     text-align: center;
     border-radius: 50%;
     transition: 0.15s;
+  }
+
+  .pagination-link-left {
+    margin-right: 16px;
+  }
+
+  .pagination-link-right {
+    margin-left: 18px;
   }
 
   .pagination-link:hover {
