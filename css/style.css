@@ -225,7 +225,7 @@
   .header-actions-item {
     position: relative;
     cursor: pointer;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
   }
 
   .header-actions-icon {
@@ -321,8 +321,8 @@
     content: "";
     position: absolute;
     top: 6px;
-    left: 18px;
-    width: 20px;
+    left: 16px;
+    width: 21px;
     height: 19px;
     background: url("../img/icon-enter.png") no-repeat
     center center;
@@ -481,8 +481,8 @@
     display: block;
     background-color: rgba(255,255,255,0.2);
     position: relative;
-    margin-left: 10px;
-    padding: 9px 16px 6px 44px;
+    margin-left: 9px;
+    padding: 9px 17px 8px 44px;
     border-radius: 15px;
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
@@ -514,8 +514,8 @@
     display: block;
     content: "";
     position: absolute;
-    top: 6px;
-    left: 16px;
+    top: 7px;
+    left: 15px;
     width: 21px;
     height: 20px;
     background: transparent url("../img/icon-basket-hover.png") no-repeat
@@ -657,7 +657,7 @@
   .header-contacts {
     position: absolute;
     right: 0;
-    bottom: -37px;
+    bottom: -38px;
     margin-left: auto;
     text-align: right;
   }
@@ -668,7 +668,7 @@
     line-height: 16px;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   .header-contacts-tel {
@@ -924,7 +924,7 @@
 
   .goods-item {
     position: relative;
-    padding: 6px 13px 21px 13px;
+    padding: 4px 13px 21px 14px;
     text-align: center;
     box-sizing: border-box;
     width: 286px;
@@ -959,11 +959,13 @@
   }
 
   .goods-price {
+    font-family: "Roboto";
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
     position: relative;
     color: rgba(255, 255, 255, 1);
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
-    font-size: 45px;
-    line-height: 45px;
     padding-left: 0;
   }
 
@@ -974,13 +976,27 @@
     line-height: 45px;
     font-weight: 700;
     bottom: 20px;
-    left: -6px;
+    left: 3px;
   }
 
   .goods-weight {
     position: absolute;
     bottom: 14px;
-    left: 77px;
+    left: 82px;
+  }
+
+  .goods-weight span:nth-child(1) {
+    font-family: "Roboto";
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+  }
+
+  .goods-weight span:nth-child(2) {
+    font-family: "Roboto";
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 700;
   }
 
   .goods-valute {
@@ -1011,19 +1027,20 @@
     font-size: 16px;
     line-height: 22px;
     font-weight: 500;
-    margin-top: 0px;
+    margin-top: 6px;
+    margin-left: 7px;
+    margin-bottom: 9px;
   }
 
   .goods-item-btn {
-    display: inline-block;
-    visibility: hidden;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    text-decoration: none;
-    color: #fff;
+    font-family: "Roboto";
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+    display: inline-block;
+    visibility: hidden;
+    text-decoration: none;
+    color: #fff;
     background-image: linear-gradient(to bottom, #f26843, #e74a35);
     box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
     border-radius: 16px;
@@ -1037,7 +1054,8 @@
 
   .goods-item:hover {
   	background-color: rgba(255,255,255,0.2);
-  	z-index: 100;
+    border-radius: 7px;
+  	z-index: 30;
   }
 
   .goods-item-btn:hover {
@@ -1798,7 +1816,7 @@
     font-weight: 500;
     margin: 0;
     color: #ffffff;
-    padding: 26px 0 6px 14px;
+    padding: 28px 0 6px 14px;
   }
 
   .caption-inner {
@@ -1808,7 +1826,7 @@
     font-weight: 500;
     margin: 0;
     color: #ffffff;
-    padding: 0 0 5px 15px;
+    padding: 0 0 6px 15px;
   }
 
   .caption-fat {
@@ -1816,12 +1834,9 @@
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
-    margin: 0;
     color: #ffffff;
-    margin-top: 1px;
-    margin-left: 2px;
-    padding: 27px 0 0px 14px;
-    margin-bottom: 6px;
+    margin: 0;
+    padding: 28px 0 6px 16px;
   }
 
   .filter-position input[type="radio"],
@@ -1860,7 +1875,7 @@
 
   .range {
     position: relative;
-    margin-top: -4px;
+    margin-top: -2px;
     width: 218px;
     border-radius: 50px;
     border: none;
@@ -1909,8 +1924,8 @@
     border-radius: 20px;
     cursor: pointer;
     outline: none;
-    margin-top: 20px;
-    margin-left: 14px;
+    margin-top: 21px;
+    margin-left: 15px;
     padding-right: 26px;
   }
 
@@ -1930,17 +1945,74 @@
     margin-top: -17px;
   }
 
-  .fat label {
+  .label-zero {
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    position: relative;
+    margin-right: 45px;
+    padding-left: 2px;
+    cursor: pointer;
+  }
+
+  .label-ten {
     font-family: "Roboto";
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
     position: relative;
     margin-right: 46px;
+    bottom: 2px;
     cursor: pointer;
   }
 
-  .extender label {
+  .label-thirty {
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    position: relative;
+    margin-right: 46px;
+    bottom: 2px;
+    cursor: pointer;
+  }
+
+  .label-over {
+    font-family: "Roboto";
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    position: relative;
+    bottom: 2px;
+    cursor: pointer;
+  }
+
+  .label-ch {
+    position: relative;
+    margin-right: 48px;
+    cursor: pointer;
+  }
+
+  .label-su {
+    position: relative;
+    margin-right: 50px;
+    cursor: pointer;
+  }
+
+  .label-fr {
+    position: relative;
+    margin-right: 50px;
+    cursor: pointer;
+  }
+
+  .label-sy {
+    position: relative;
+    margin-right: 50px;
+    cursor: pointer;
+  }
+
+  .label-ja {
     position: relative;
     margin-right: 50px;
     cursor: pointer;
@@ -1951,7 +2023,7 @@
     margin-right: 0;
   }
 
-  .fat label:before {
+  .label-zero::before {
     content: "";
     display: block;
     position: absolute;
@@ -1960,6 +2032,39 @@
     background: url("../img/radio-off.png") no-repeat;
     top: -2px;
     left: -29px;
+  }
+
+  .label-ten::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 22px;
+    background: url("../img/radio-off.png") no-repeat;
+    top: -1px;
+    left: -31px;
+  }
+
+  .label-thirty::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 22px;
+    background: url("../img/radio-off.png") no-repeat;
+    top: -1px;
+    left: -30px;
+  }
+
+  .label-over::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 21px;
+    height: 22px;
+    background: url("../img/radio-off.png") no-repeat;
+    top: -1px;
+    left: -31px;
   }
 
   .fat input[type="radio"]:checked + label:before {
@@ -1982,7 +2087,7 @@
     height: 20px;
     background: url("../img/check-off.png") no-repeat;
     top: 0px;
-    left: -32px;
+    left: -31px;
   }
 
   .label-ja:before {
@@ -2004,7 +2109,7 @@
     height: 20px;
     background: url("../img/check-off.png") no-repeat;
     top: 0px;
-    left: -30px;
+    left: -31px;
   }
 
   .label-su:before {
@@ -2015,7 +2120,7 @@
     height: 20px;
     background: url("../img/check-off.png") no-repeat;
     top: 0px;
-    left: -32px;
+    left: -31px;
   }
 
   .label-fr:before {
@@ -2026,7 +2131,7 @@
     height: 20px;
     background: url("../img/check-off.png") no-repeat;
     top: 0px;
-    left: -34px;
+    left: -33px;
   }
 
   .extender input[type="checkbox"]:checked + label:before {
@@ -2048,7 +2153,7 @@
   .fieldset-fat {
     margin: 0;
     display: inline;
-    padding: 7px 16px 7px 44px;
+    padding: 7px 16px 5px 44px;
     border-radius: 50px;
     border: none;
     background-color: rgba(255,255,255,0.2);
