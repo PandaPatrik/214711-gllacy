@@ -43,6 +43,7 @@
   	}
 
   .container-map {
+    position: relative;
     box-sizing: border-box;
   	width: 1200px;
   	margin: 0 auto;
@@ -1352,7 +1353,7 @@
     line-height: 20px;
     font-weight: 400;
     position: absolute;
-    right: 90px;
+    right: 27px;
     top: 63px;
     width: 302px;
     border-radius: 10px;
